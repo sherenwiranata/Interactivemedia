@@ -1,0 +1,43 @@
+@font-face {
+    font-family: smallFont;
+    src: url(/font/pixelfont.ttf);
+}
+
+body {
+    background-color: black;
+    color: white; /* This ensures text is readable */
+}
+
+h1 {
+    font-family: smallFont;
+    font-size: 9vw;
+    color: blue;
+    stroke-width: 0%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    animation: colorChange 3s infinite; /* Continuous color change */
+}
+@keyframes colorChange {
+    0% {
+        color: blue;
+    }
+    50% {
+        color: yellow;
+    }
+    100% {
+        color: blue;
+    }
+}
+button {
+    font-family: smallFont;
+    font-size: 2vw;
+    padding: 5px 10px;
+    border: 2px solid white;
+    background-color: red;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.1); /* Slightly increase the size of the text */
+}
