@@ -1,6 +1,6 @@
 let cols = 12; // Grid columns
 let rows = 9.5; // Grid rows
-let cellSize = 200; // Size of each grid cell
+let cellSize = 550; // Size of each grid cell
 
 /************ adjust screen smaller *************/
 let screenWidth = 5;  // Visible columns  
@@ -21,6 +21,9 @@ function preload() {
 }
 
 function setup() {
+  // Dynamically calculate cell size based on window width
+  cellSize = min(windowWidth / screenWidth, windowHeight / screenHeight);
+
   let cnv = createCanvas(screenWidth * cellSize, screenHeight * cellSize);
   cnv.parent('gameContainer'); // Attach the canvas to the div
 
@@ -49,6 +52,12 @@ function setup() {
   player = paths.length > 0 ? { x: paths[0].x, y: paths[0].y } : { x: 0, y: 0 };
 
   placeCoins(3); // Generates 3 coins
+}
+
+// Handle resizing to keep it responsive
+function windowResized() {
+  cellSize = min(windowWidth / screenWidth, windowHeight / screenHeight);
+  resizeCanvas(screenWidth * cellSize, screenHeight * cellSize);
 }
 
 function draw() {
