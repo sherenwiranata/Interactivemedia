@@ -1,6 +1,6 @@
 let cols = 12; // Grid columns
 let rows = 9.5; // Grid rows
-let cellSize = 550; // Size of each grid cell
+let cellSize = 200; // Size of each grid cell
 
 /************ adjust screen smaller *************/
 let screenWidth = 5;  // Visible columns  
