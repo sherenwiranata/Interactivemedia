@@ -1,6 +1,6 @@
 @font-face {
     font-family: smallFont;
-    src: url(/pixelfont.ttf);
+    src: url(../pixelfont.ttf);
 }
 
 body {
