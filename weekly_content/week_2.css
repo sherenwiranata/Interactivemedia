@@ -57,7 +57,7 @@ button:hover {
 .draggable img {
     width: 25vw; /* Adjust the width to your desired size */
     height: auto; /* Maintain aspect ratio */
-    border: 10px solid blue;
+    border: 10px solid red;
 }
 
 .draggable video {
