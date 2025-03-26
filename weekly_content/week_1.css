@@ -41,3 +41,35 @@ button {
 button:hover {
     transform: scale(1.1); /* Slightly increase the size of the text */
 }
+
+.fixedwrapper {
+    position: relative;
+    width: 20vw;
+    height: auto;
+}
+
+.draggable {
+    position: absolute; /* Necessary for drag movement */
+    cursor: pointer;
+    z-index: 1000; /* To ensure it's on top */
+}
+
+.draggable img {
+    width: 40vw; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    border: 10px solid yellow;
+}
+.center-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 0, 0.8); /* Yellow background */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1001; /* Ensure the button is above the image */
+    text-align: center;
+}
