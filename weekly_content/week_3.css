@@ -1,0 +1,81 @@
+@font-face {
+    font-family: smallFont;
+    src: url(/pixelfont.ttf);
+}
+
+body {
+    background-color: black;
+    color: white; /* This ensures text is readable */
+}
+
+h1 {
+    font-family: smallFont;
+    font-size: 9vw;
+    color: blue;
+    stroke-width: 0%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    animation: colorChange 3s infinite; /* Continuous color change */
+}
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+    50% {
+        color: blue;
+    }
+    100% {
+        color: red;
+    }
+}
+button {
+    font-family: smallFont;
+    font-size: 2vw;
+    padding: 5px 10px;
+    border: 2px solid white;
+    background-color: red;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.1); /* Slightly increase the size of the text */
+}
+
+.fixedwrapper {
+    position: relative;
+    width: 20vw;
+    height: auto;
+}
+
+.draggable {
+    position: absolute; /* Necessary for drag movement */
+    cursor: pointer;
+    z-index: 1000; /* To ensure it's on top */
+}
+
+.draggable img {
+    width: 25vw; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    border: 10px solid blue;
+}
+
+.draggable video {
+    width: 25vw; /* Adjust the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    border: 10px solid red;
+}
+.center-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 0, 0.8); /* Yellow background */
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1001; /* Ensure the button is above the image */
+    text-align: center;
+}
