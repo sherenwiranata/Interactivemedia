@@ -2,24 +2,18 @@
 function saveCoinPositions(coinPositions) {
     localStorage.setItem('coinPositions', JSON.stringify(coinPositions));
 }
-
 // Function to simulate placing coins on the page (used chatgpt to fix errors in code)
 function placeCoins() {
-    // Example positions for the coins (you can dynamically calculate these)
     const coinPositions = [
         { x: 2, y: 8 },
         { x: 10, y: 6 },
         { x: 7, y: 8 }
     ];
-
-    // Save positions to localStorage
     saveCoinPositions(coinPositions);
 }
-
-// Call the function to place coins and save the positions when the page loads
 window.onload = placeCoins;
 
-//from matilda's workbook
+//from matilda's workbook and help from chatgpt
 // This function enables dragging functionality
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

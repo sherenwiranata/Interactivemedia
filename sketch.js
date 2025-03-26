@@ -1,25 +1,25 @@
-let cols = 12; // Grid columns
-let rows = 9.5; // Grid rows
+let cols = 12; 
+let rows = 9.5; 
 let cellSize = 550; // Size of each grid cell
 
-/************ adjust screen smaller *************/
+/************ adjust screen smaller/ not show all map *************/
 let screenWidth = 5;  // Visible columns  
 let screenHeight = 3; // Visible rows
-
 let coins = [];
 let walls = [];
 let paths = [];
 let player;
-let stickmanImg; // Variable for the stickman image
-let coinImg; // Load coin image 
-let mapImg; // ⭐ NEW: Variable for the map image
+let stickmanImg; //change to character
+let coinImg; 
+let mapImg;
 
 function preload() {
-  mapImg = loadImage('img/map.png'); // ⭐ NEW: Load the map image
-  stickmanImg = loadImage('img/stickman.png'); // Load stickman image
-  coinImg = loadImage('img/coin.png'); // Load coin image
+  mapImg = loadImage('img/map.png');
+  stickmanImg = loadImage('img/stickman.png'); 
+  coinImg = loadImage('img/coin.png'); 
 }
 
+/********* help from youtube videos linked in workbook and chatgpt *********/
 function setup() {
   // Dynamically calculate cell size based on window width
   cellSize = min(windowWidth / screenWidth, windowHeight / screenHeight);
@@ -85,7 +85,7 @@ function draw() {
     rect(path.x * cellSize, path.y * cellSize, cellSize, cellSize);
   }
 
-// ⭐ NEW: Draw the map image first (behind everything)
+// Draw the map image first (behind everything)
 image(mapImg, 0, 0, cols * cellSize, rows * cellSize);
 
   // Draw the coins
@@ -163,7 +163,7 @@ function collectCoin() {
       coins.splice(i, 1);
       
       // Using `confirm()` for pop-up with "Open" and "Close"
-      let userChoice = confirm(`🎉 Congratulations! You found Week ${coinValue} content! 🎉\n\nClick "OK" to open or "Cancel" to close.`);
+      let userChoice = confirm(`CONGRATULATIONS! You found Week ${coinValue} content! \n\nClick "OK" to open or "Cancel" to close.`);
 
       if (userChoice) {
         window.location.href = `weekly_content/week_${coinValue}.html`; // Change this URL as needed

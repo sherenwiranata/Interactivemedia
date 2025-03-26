@@ -1,3 +1,4 @@
+//https://stackoverflow.com/questions/66452961 and chatgpt
 document.querySelector(".gameName").addEventListener("click", function() {
     this.classList.add("wobble");
 
