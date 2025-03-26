@@ -20,23 +20,24 @@ html, body {
       left: 50%;
       transform: translateX(-50%); /* Center horizontally */
       bottom: 0; /* Align to the bottom */
-      width: 80vw; /* Example size, adjust based on frame image size */
+      width: 100vw; /* Example size, adjust based on frame image size */
       height: auto;
   }
-  
+  /*
   #gameFrame {
       position: absolute;
       left: 41%;
-      transform: translateX(-50%); /* Center horizontally */
-      bottom: 0; /* Align to the bottom */
-      width: 65vw; /* Same as game container */
+      transform: 
+      bottom: 0;
+      width: 65vw; 
       height: 80vh;
   }
   
   #gameFrame img {
-      width: 100%; /* Ensure the image fits the parent frame size */
-      height: auto; /* Maintain aspect ratio */
+      width: 100%; 
+      height: auto; /* Maintain aspect ratio 
   }
+  */
 
  /* Center the #gameGuide image */
 #gameGuide {
@@ -44,6 +45,7 @@ html, body {
     top: 50%; /* Center vertically */
     left: 85%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust to truly center */
+    box-shadow: 10px 10px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 #gameGuide img {
