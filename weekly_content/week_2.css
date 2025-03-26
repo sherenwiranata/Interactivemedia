@@ -5,7 +5,7 @@
 
 body {
     background-color: black;
-    color: white; /* This ensures text is readable */
+    color: white; 
 }
 
 h1 {
@@ -16,8 +16,10 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    animation: colorChange 3s infinite; /* Continuous color change */
+    animation: colorChange 3s infinite;
 }
+
+/* animation for the colour changes, stackoverflow.com/questions/62975982*/
 @keyframes colorChange {
     0% {
         color: red;
@@ -29,6 +31,7 @@ h1 {
         color: red;
     }
 }
+
 button {
     font-family: smallFont;
     font-size: 2vw;
@@ -38,10 +41,12 @@ button {
     margin-top: 20px;
 }
 
+/* Slightly increase the size of the text */
 button:hover {
-    transform: scale(1.1); /* Slightly increase the size of the text */
+    transform: scale(1.1); 
 }
 
+/* learnt from matilda's workbook week2*/
 .fixedwrapper {
     position: relative;
     width: 20vw;
@@ -49,33 +54,34 @@ button:hover {
 }
 
 .draggable {
-    position: absolute; /* Necessary for drag movement */
+    position: absolute; 
     cursor: pointer;
-    z-index: 1000; /* To ensure it's on top */
+    z-index: 1000; 
 }
 
 .draggable img {
-    width: 25vw; /* Adjust the width to your desired size */
-    height: auto; /* Maintain aspect ratio */
+    width: 25vw; 
+    height: auto; 
     border: 10px solid red;
 }
 
 .draggable video {
-    width: 25vw; /* Adjust the width to your desired size */
-    height: auto; /* Maintain aspect ratio */
+    width: 25vw; 
+    height: auto; 
     border: 10px solid red;
 }
+
 .center-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the button */
+    transform: translate(-50%, -50%); 
     padding: 10px 20px;
-    background-color: rgba(255, 255, 0, 0.8); /* Yellow background */
+    background-color: rgba(255, 255, 0, 0.8); 
     color: black;
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
-    z-index: 1001; /* Ensure the button is above the image */
+    z-index: 1001; 
     text-align: center;
 }
