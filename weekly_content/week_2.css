@@ -20,13 +20,13 @@ h1 {
 }
 @keyframes colorChange {
     0% {
-        color: blue;
+        color: red;
     }
     50% {
         color: yellow;
     }
     100% {
-        color: blue;
+        color: red;
     }
 }
 button {
@@ -57,7 +57,7 @@ button:hover {
 .draggable img {
     width: 25vw; /* Adjust the width to your desired size */
     height: auto; /* Maintain aspect ratio */
-    border: 10px solid yellow;
+    border: 10px solid blue;
 }
 
 .draggable video {
