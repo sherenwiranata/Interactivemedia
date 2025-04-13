@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="gamelevel2.css">
+     <!-- p5 libraries -->
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.sound.min.js"></script>
+    <!-- JavaScript file -->
+    <script src="gamelevel2.js" async></script>
+</head>
+<body>
+<!-- Navbar -->
+<div id="navbar">
+    <button id="back-btn">← Back</button>
+    <button id="guide-btn">📘 Guide</button>
+    <button id="hint-btn">💡 Hint</button>
+  </div>
+  
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-button">&times;</span>
+      <p id="popup-text"></p>
+      <img id="popup-img" src="" alt="Popup image" />
+    </div>
+  </div>
+    <div id="gameContainer"></div>
+    <div id="gameGuide">
+        <!--<img src="img/guide.png" alt="guide">-->
+    </div>
+</body>
+</html>
