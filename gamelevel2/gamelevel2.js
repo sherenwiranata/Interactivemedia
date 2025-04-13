@@ -78,7 +78,7 @@ function setup() {
    const hintBtn = select('#hint-btn');
  
    backBtn.mousePressed(() => {
-     window.location.href = "../levelselect/levelselect.html"; // Change to your desired page
+     window.location.href = "../levelselect/levelselect.html";
    });
  
    guideBtn.mousePressed(() => {
@@ -203,10 +203,10 @@ function collectCoin() {
       coins.splice(i, 1);
       
       // Using `confirm()` for pop-up with "Open" and "Close"
-      let userChoice = confirm(`CONGRATULATIONS! You found Week ${coinValue} content! \n\nClick "OK" to open or "Cancel" to close.`);
+      let userChoice = confirm(`CONGRATULATIONS! You found Week ${coinValue + 3} content! \n\nClick "OK" to open or "Cancel" to close.`);
 
       if (userChoice) {
-        window.location.href = `weekly_content/week_${coinValue}.html`; // Change this URL as needed
+        window.location.href = `../weekly_content_2/week_${coinValue + 3}.html`; // Change this URL as needed
       }
     }
   }
