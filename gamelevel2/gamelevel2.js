@@ -71,6 +71,23 @@ function setup() {
   player = paths.length > 0 ? { x: paths[0].x, y: paths[0].y } : { x: 0, y: 0 };
 
   placeCoins(3); // Generates 3 coins
+
+   // BUTTON INTERACTIONS NAV BAR
+   const backBtn = select('#back-btn');
+   const guideBtn = select('#guide-btn');
+   const hintBtn = select('#hint-btn');
+ 
+   backBtn.mousePressed(() => {
+     window.location.href = "../levelselect/levelselect.html"; // Change to your desired page
+   });
+ 
+   guideBtn.mousePressed(() => {
+     showPopup("Here's how to play:", '../imggame2/gameguide2.png');
+   });
+ 
+   hintBtn.mousePressed(() => {
+     showPopup("Try looking near the corner...", '../imggame2/map2_2.png');
+   });
 }
 
 // Handle resizing to keep it responsive
@@ -195,4 +212,21 @@ function collectCoin() {
   }
 }
 
+/********* NAV BAR ********/
+function showPopup(message, imageUrl) {
+    const popup = document.getElementById("popup");
+    const text = document.getElementById("popup-text");
+    const img = document.getElementById("popup-img");
+  
+    text.textContent = message;
+    img.src = imageUrl;
+    popup.style.display = "flex";
+  
+    document.querySelector(".close-button").onclick = () => {
+      popup.style.display = "none";
+    };
+    popup.onclick = (e) => {
+      if (e.target === popup) popup.style.display = "none";
+    };
+  }
 
