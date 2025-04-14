@@ -4,12 +4,12 @@
 }
 html, body {
     height: 100%;
-    background-color: black;
+    background-color: white;
     overflow: hidden;
   }
   /* Heading styles */
 .heading {
-    color: white;
+    color: blue;
     text-align: center;
     margin-top: 50px;
     font-family: smallFont;
@@ -19,13 +19,13 @@ html, body {
   .fake-div {
     position: absolute;
     cursor: pointer;
-    transition: top 0.3s, left 0.3s;
+    transition: top 0.01s, left 0.01s;
   }
   
   /* Portal image styling */
   .portal-img {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
   }
   
   /* Status text styling */

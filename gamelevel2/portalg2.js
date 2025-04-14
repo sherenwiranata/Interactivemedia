@@ -4,7 +4,7 @@ let statusP;
 let magicWords = [
   "please", "sorry", "excuse me", "congratulations", 
   "can i", "don't worry", "do not worry", 
-  "i love you", "may i help you", "may i help you?"
+  "i love you", "thank you"
 ];
 let detected = false;
 
@@ -16,16 +16,19 @@ function setup() {
 
   // Create the floating image container
   fakeDiv = createDiv().class('fake-div');
-  fakeDiv.position(windowWidth / 2, windowHeight / 2);
+  let initialW = 180;
+    let initialH = 180;
+    fakeDiv.position((windowWidth - initialW) / 2, (windowHeight - initialH) / 2);
 
-  let img = createImg('your-image.png', 'portal creature').class('portal-img');
+
+  let img = createImg('../imggame2/portal.png', 'portal creature').class('portal-img');
   fakeDiv.child(img);
 
   // Move the div away from mouse
   fakeDiv.mouseOver(() => {
     if (!detected) {
-      let x = random(windowWidth - 150);
-      let y = random(windowHeight - 150);
+      let x = random(windowWidth - 500);
+      let y = random(windowHeight - 500);
       fakeDiv.position(x, y);
     }
   });
@@ -51,7 +54,7 @@ function gotSpeech() {
         statusP.html('Magic word detected! Entering portal...');
         setTimeout(() => {
           window.location.href = '../weekly_content_2/weekly_content_2_select.html';
-        }, 1500);
+        }, 1200);
         break;
       }
     }

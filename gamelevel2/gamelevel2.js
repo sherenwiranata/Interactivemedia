@@ -211,7 +211,7 @@ function collectCoin() {
   
         // When 3 coins have been collected, show popup
         if (gemsCollected >= 3) {
-          let goToNext = confirm("✨ You've collected enough gems to transport to a world of weekly content!\n\nClick OK to continue or Cancel to stay.");
+          let goToNext = confirm("You've collected enough gems to transport to a world of weekly content!\n\nClick OK to continue or Cancel to stay.");
           if (goToNext) {
             window.location.href = `portalg2.html`; // or your chosen destination
           }
