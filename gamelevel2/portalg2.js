@@ -12,7 +12,11 @@ function setup() {
   noCanvas();
 
   // Heading
-  createElement('h1', 'Magic words are always appreciated').class('heading');
+  let heading = createElement('h1', 'Three gems you have paid,');
+  heading.class('heading');
+  let headingLine2 = createElement('h1', 'what is left are some magic words said.');
+  headingLine2.class('heading');
+  
 
   // Create the floating image container
   fakeDiv = createDiv().class('fake-div');

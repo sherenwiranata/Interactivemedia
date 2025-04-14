@@ -3,15 +3,21 @@
     src: url(../pixelfont.ttf);
 }
 html, body {
-    height: 100%;
-    background-color: white;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(27, 13, 14);
+  background-image: url('../imggame2/bg2.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 120%; /* or 'cover' depending on the look you want */
   }
   /* Heading styles */
 .heading {
-    color: blue;
+    color: white;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 35px;
     font-family: smallFont;
   }
   
