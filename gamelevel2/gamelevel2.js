@@ -12,6 +12,10 @@ let player;
 let stickmanImg; //change to character
 let coinImg; 
 let mapImg;
+let gemsCollected = 0;
+let bgSound;
+let isPlaying = true;
+let toggleButton;
 
 function preload() {
 
@@ -25,6 +29,7 @@ function preload() {
   coinImg = loadImage('../imggame2/gem.png'); 
   coinSound = loadSound('../sound/Win.mp3');
   moveSound = loadSound('../sound/move.mp3', () => moveSound.setVolume(0.05));
+  bgSound = loadSound('../sound/sonicsound.mp3');
 }
 
 /********* help from youtube videos linked in workbook and chatgpt *********/
@@ -94,6 +99,8 @@ function setup() {
 function windowResized() {
   cellSize = min(windowWidth / screenWidth, windowHeight / screenHeight);
   resizeCanvas(screenWidth * cellSize, screenHeight * cellSize);
+
+
 }
 
 function draw() {
@@ -138,6 +145,7 @@ function draw() {
   pop(); // Reset translation
 }
 
+
 // Move the player using arrow keys
 function keyPressed() {
   let nextX = player.x;
@@ -170,7 +178,6 @@ function createPath(startX, startY, endX, endY) {
 // Function to place coins at 5 specific locations
 function placeCoins(numCoins) {
   let possibleSpots = [ 
-    {x: 5, y: 12}, 
     {x: 11, y: 8}, 
     {x: 12, y: 13}, 
     {x: 9, y: 9}, 
@@ -195,23 +202,25 @@ function placeCoins(numCoins) {
 
 // Function to collect a coin and open a new tab based on its value
 function collectCoin() {
-  for (let i = 0; i < coins.length; i++) {
-    if (player.x === coins[i].x && player.y === coins[i].y) {
-      let coinValue = coins[i].value;
-      coinSound.play(); 
-      // Remove the collected coin
-      coins.splice(i, 1);
-      
-      // Using `confirm()` for pop-up with "Open" and "Close"
-      let userChoice = confirm(`CONGRATULATIONS! You found Week ${coinValue + 3} content! \n\nClick "OK" to open or "Cancel" to close.`);
-
-      if (userChoice) {
-        window.location.href = `../weekly_content_2/week_${coinValue + 3}.html`; // Change this URL as needed
+    for (let i = 0; i < coins.length; i++) {
+      if (player.x === coins[i].x && player.y === coins[i].y) {
+        coinSound.play(); 
+        coins.splice(i, 1); // Remove the coin
+        gemsCollected++;
+        document.getElementById("gem-counter").textContent = `Gems: ${gemsCollected}/3`;
+  
+        // When 3 coins have been collected, show popup
+        if (gemsCollected >= 3) {
+          let goToNext = confirm("✨ You've collected enough gems to transport to a world of weekly content!\n\nClick OK to continue or Cancel to stay.");
+          if (goToNext) {
+            window.location.href = `portalg2.html`; // or your chosen destination
+          }
+        }
+        break;
       }
     }
   }
-}
-
+  
 /********* NAV BAR ********/
 function showPopup(message, imageUrl) {
     const popup = document.getElementById("popup");

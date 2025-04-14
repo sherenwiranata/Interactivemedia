@@ -1,0 +1,36 @@
+@font-face {
+    font-family: smallFont;
+    src: url(../pixelfont.ttf);
+}
+html, body {
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+  /* Heading styles */
+.heading {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-family: smallFont;
+  }
+  
+  /* Fake div container styles */
+  .fake-div {
+    position: absolute;
+    cursor: pointer;
+    transition: top 0.3s, left 0.3s;
+  }
+  
+  /* Portal image styling */
+  .portal-img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Status text styling */
+  .status-text {
+    color: lightgray;
+    text-align: center;
+    font-family: smallFont;
+  }
