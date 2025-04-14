@@ -25,7 +25,7 @@ function preload() {
         () => console.error('Map image failed to load')
       );
 
-  stickmanImg = loadImage('../img/stickman.png'); 
+  stickmanImg = loadImage('../imggame2/character.png'); 
   coinImg = loadImage('../imggame2/gem.png'); 
   coinSound = loadSound('../sound/Win.mp3');
   moveSound = loadSound('../sound/move.mp3', () => moveSound.setVolume(0.05));
