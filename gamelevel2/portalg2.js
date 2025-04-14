@@ -14,7 +14,7 @@ function setup() {
   // Heading
   let heading = createElement('h1', 'Three gems you have paid,');
   heading.class('heading');
-  let headingLine2 = createElement('h1', 'what is left are some magic words said.');
+  let headingLine2 = createElement('h1', 'what is left are some magic word to say.');
   headingLine2.class('heading');
   
 
