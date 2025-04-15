@@ -18,6 +18,32 @@ button {
     margin-top: 20px;
 }
 
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+h1 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: max-content; /* or 100% if you want it to stretch */
+    font-family: smallFont;
+    font-size: 5vw;
+    color: rgb(255, 255, 0);
+    z-index: 999; /* to stay above other elements */
+}
+
+#topcorner-img {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    width: 15vw;
+    height: auto;
+    z-index: 999; /* make sure it’s on top */
+}
+
 #title {
     font-family: smallFont;
     font-style: italic;
@@ -28,5 +54,56 @@ button {
     width: 100%;
     text-align: center;
     white-space: nowrap;
-    margin: 100px 0; /* optional vertical spacing */
+    margin: 100px 0;
+}
+
+#corner-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#corner-link img {
+    width: 15vw;
+    height: auto;
+    cursor: pointer;
+}
+
+#corner-link:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.week4-link img {
+    width: 15vw;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 18%;
+    bottom: 20%;
+}
+
+.week5-link img {
+    width: 10vw;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 45%;
+    bottom: 40%;
+}
+
+.week6-link img {
+    width: 15vw;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 18%;
+    bottom: 20%;
+}
+
+/* Shared hover effect */
+.week4-link img:hover,
+.week5-link img:hover,
+.week6-link img:hover {
+    transform: scale(1.1) rotate(5deg);
 }
