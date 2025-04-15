@@ -7,22 +7,32 @@
     <!-- css file -->
     <link rel="stylesheet" href="levelselect.css">
     <!-- p5 library -->
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
+    <script src="../libraries/p5.min.js"></script>
+    <script src="../libraries/p5.sound.min.js"></script>
     <!-- p5 file -->
     <script src="homepagep5.js"></script>
 </head>
 <body>
-    <div class="levelAbutton">
-        <a href="../game.html">
-            <img src="../img/startbutton.png" alt="startbutton">
-        </a>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+          <source src="../mp4/homepagewallpaper.mp4" type="video/mp4">
+        </video>
     </div>
-    <div class="levelBbutton">
-        <a href="../gamelevel2/gamelevel2.html">
-            <img src="../img/startbutton.png" alt="startbutton">
-        </a>
-    </div>
+    <!-- Heading for Select Game -->
+    <h1 class="heading">Select Game</h1>
     
+    <!-- Container for cards -->
+    <div class="card-container">
+        <div class="levelAcard">
+            <a href="../game.html">
+                <img src="./img/game1.png" alt="startcard">
+            </a>
+        </div>
+        <div class="levelBcard">
+            <a href="../gamelevel2/gamelevel2.html">
+                <img src="./img/game2.png" alt="startcard">
+            </a>
+        </div>
+    </div>
 </body>
 </html>
