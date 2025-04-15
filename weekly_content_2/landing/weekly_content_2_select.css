@@ -1,0 +1,32 @@
+@font-face {
+    font-family: smallFont;
+    src: url(../../pixelfont.ttf);
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+button {
+    font-family: smallFont;
+    font-size: 2vw;
+    padding: 5px 30px;
+    border: 3px solid rgb(226,8,255);
+    background-color: transparent;
+    color: rgb(255, 255, 0);
+    margin-top: 20px;
+}
+
+#title {
+    font-family: smallFont;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgb(226, 8, 255);
+    font-size: 3em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    margin: 100px 0; /* optional vertical spacing */
+}
