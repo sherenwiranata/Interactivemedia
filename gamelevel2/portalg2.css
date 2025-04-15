@@ -17,9 +17,19 @@ html, body {
 .heading {
     color: white;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 40px;
     font-family: smallFont;
+    font-weight: lighter;
+    font-size: 30px;
   }
+
+.heading1{
+    color: white;
+    text-align: center;
+    font-family: smallFont;
+    font-weight: lighter;
+    font-size: 30px;
+}
   
   /* Fake div container styles */
   .fake-div {

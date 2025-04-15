@@ -2,9 +2,9 @@ let fakeDiv;
 let speechRec;
 let statusP;
 let magicWords = [
-  "please", "sorry", "excuse me", "congratulations", 
-  "can i", "don't worry", "do not worry", 
-  "i love you", "thank you"
+  "please", "sorry", "excuse me", "alkazam", 
+  "presto", "open sesame", "abracadabra", 
+  "i love you", "thank you", "shazam", "alohomora", "zimzalabim"
 ];
 let detected = false;
 
@@ -12,10 +12,12 @@ function setup() {
   noCanvas();
 
   // Heading
-  let heading = createElement('h1', 'Three gems you have paid,');
+  let heading = createElement('h1', 'Three gems you have paid, yet coin is not all');
   heading.class('heading');
-  let headingLine2 = createElement('h1', 'what is left are some magic word to say.');
-  headingLine2.class('heading');
+  let headingLine2 = createElement('h2', 'A Spell must rise, or you shall fall');
+  headingLine2.class('heading1');
+  let headingLine3 = createElement('h2', 'shout the spell, and you may pass');
+  headingLine3.class('heading1');
   
 
   // Create the floating image container
