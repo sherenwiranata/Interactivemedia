@@ -59,7 +59,7 @@ function gotSpeech() {
         detected = true;
         statusP.html('Magic word detected! Entering portal...');
         setTimeout(() => {
-          window.location.href = '../weekly_content_2/weekly_content_2_select.html';
+          window.location.href = '../weekly_content_2/landing/weekly_content_2_select.html';
         }, 1200);
         break;
       }
