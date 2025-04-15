@@ -29,9 +29,9 @@ function preload() {
 
   stickmanImg = loadImage('../imggame2/character.png'); 
   coinImg = loadImage('../imggame2/gem.png'); 
-  coinSound = loadSound('../sound/Win.mp3');
-  moveSound = loadSound('../sound/move.mp3', () => moveSound.setVolume(0.05));
-  bgSound = loadSound('../sound/sonicsound.mp3');
+  coinSound = loadSound('../sound/Win.mp3', () => coinSound.setVolume(0.15));
+  moveSound = loadSound('../sound/move.mp3', () => moveSound.setVolume(0.03));
+  bgSound = loadSound('../sound/subwooferlullaby.mp3', () => bgSound.setVolume(0.1));
 }
 
 preloadSound();
