@@ -3,7 +3,8 @@ let hair;
 let mouseInCanvas = false;  // Flag to check if mouse is in the canvas
 
 function setup() {
-  createCanvas(400, 400);
+    let cnv = createCanvas(400, 400); // or whatever size you want
+    cnv.parent('sketch1-container1'); // 👈 this tells p5 where to put the canvas
   background(255, 245, 230);
   fill(200, 100, 200);
   noStroke();
