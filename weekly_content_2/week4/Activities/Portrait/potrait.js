@@ -1,60 +1,65 @@
- 
-let hair;
-let mouseInCanvas = false;  // Flag to check if mouse is in the canvas
-
-function setup() {
-    let cnv = createCanvas(400, 400); // or whatever size you want
-    cnv.parent('sketch1-container1'); // 👈 this tells p5 where to put the canvas
-  background(255, 245, 230);
-  fill(200, 100, 200);
-  noStroke();
+// Sketch for the hair drawing
+var sketch1 = function(p) {
+    var x = 100.0; 
+    var y = 100; 
+    var speed = 2.5; 
+    
+    p.setup = function() {
+      p.createCanvas(400, 400); // Set canvas size
+      p.background(255, 245, 230);
+      p.fill(200, 100, 200);
+      p.noStroke();
+      
+      p.fill(0);
+      p.ellipse(p.width / 2, 400, 180, 230);
+      // Draw an oval at center
+      p.fill(242, 197, 187);
+      p.ellipse(p.width / 2, p.height / 2, 200, 230);
+      //ear
+      p.arc(110, 200, 60, 50, p.HALF_PI, 3 * p.HALF_PI, p.PIE);
+      p.arc(290, 200, 60, 50, 3 * p.HALF_PI, p.HALF_PI, p.PIE);
+      p.fill(217, 4, 43);
+      //lips
+      p.ellipse(p.width / 2, 240, 18, 18);
+      p.fill(217, 4, 43);
+      p.ellipse(p.width / 2, 247, 15, 15);
+      //eyes
+      p.fill(13, 13, 13);
+      p.arc(150, 180, 30, 30, 0, p.PI, p.PIE);
+      p.arc(250, 180, 30, 30, 0, p.PI, p.PIE);
+      p.triangle(190, 210, 200, 190, 210, 210);
+      //blush
+      p.fill(245, 145, 160);
+      p.noStroke();
+      p.ellipse(150, 220, 50, 30);
+      p.ellipse(255, 220, 50, 30);
+      //glasses
+      p.stroke(0);
+      p.strokeWeight(3);
+      p.noFill();
+      p.ellipse(150, 180, 80, 80);
+      p.ellipse(250, 180, 80, 80);
+      //eyelash
+      p.rect(130, 180, 35, 1);
+      p.rect(230, 180, 35, 1);
+      //eyebrows
+      p.rect(130, 155, 35, 1);
+      p.rect(235, 155, 35, 1);
+      
+      p.textAlign(p.CENTER, p.TOP); // Align the text to the center and top
+      p.strokeWeight(2);
+      p.textSize(35); // Set the text size
+      p.fill(0); // Set text color to black (or any other color)
+      p.text("Draw My Hair!", p.width / 2, 10); // Draw text at the top middle of the canvas
+    };
   
-  fill(0);
-  ellipse(width / 2, 400, 180, 230);
-  // Draw an oval at center
-  fill(242, 197, 187);
-  ellipse(width / 2, height / 2, 200, 230);
-  //ear
-  arc(110, 200, 60, 50, HALF_PI, 3 * HALF_PI, PIE);
-  arc(290, 200, 60, 50, 3 * HALF_PI, HALF_PI, PIE);
-  fill(217, 4, 43);
-  //lips
-  ellipse(width/2, 240, 18, 18);
-  fill(217, 4, 43);
-  ellipse(width/2, 247, 15, 15);
-  //eyes
-  fill(13, 13, 13);
-  arc(150, 180, 30, 30, 0, PI, PIE);
-  arc(250, 180, 30, 30, 0, PI, PIE);
-  triangle(190, 210, 200, 190, 210, 210);
-  //blush
-  fill(245, 145, 160);
-  noStroke();
-  ellipse(150,220,50,30);
-  ellipse(255,220,50,30);
-  //glasses
-  stroke(0);
-  strokeWeight(3);
-  noFill();
-  ellipse(150,180,80,80);
-  ellipse(250,180,80,80);
-  //eyelash
-  rect(130 ,180 ,35 ,1);
-  rect(230 ,180 ,35 ,1);
-  //eyebrows
-  rect(130 ,155 ,35 ,1);
-  rect(235 ,155 ,35 ,1);
+    p.draw = function() {
+      p.noFill();
+      // Set the stroke color to a random RGB value for the rectangle
+      p.stroke(p.random(255), p.random(255), p.random(255));
+      p.rect(p.mouseX, p.mouseY, 20);
+    };
+  };
   
-   textAlign(CENTER, TOP);  // Align the text to the center and top
-  strokeWeight(2);
-  textSize(35);            // Set the text size
-  fill(0);                 // Set text color to black (or any other color)
-  text(" Draw My Hair!", width / 2, 10);  // Draw text at the top middle of the canvas
-}
-
-function draw() {
-  noFill();
-  // Set the stroke color to a dark brown shade
-  stroke(random(255), random(255), random(255));
-  rect(mouseX, mouseY, 20);
-}
+  // Create an instance of the sketch and attach it to a container div
+  var myp5 = new p5(sketch1, 'sketch1-container');  

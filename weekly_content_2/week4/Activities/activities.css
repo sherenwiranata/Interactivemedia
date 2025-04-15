@@ -1,91 +1,75 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
-  }
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    position: relative;
-    border-bottom: 2px solid #000;
-  }
-  
-  .back-button {
-    position: absolute;
-    left: 20px;
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    padding: 5px 10px;
-  }
-  
-  .page-title {
-    margin: 0;
-    font-size: 2rem;
-    text-align: center;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
-  }
-  
-  .grid-item {
-    text-align: center;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
 
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid black;
-  }
-  
-  .description {
-    margin-top: 10px;
-    font-size: 0.9rem;
-  }
-  
-  #iframe, #inspo2 {
-    width: 100%;
-    height: 300px;
-    border: 2px solid black;
-  }
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  border-bottom: 2px solid #000;
+}
 
-  #inspo2 {
-    width: 100%;
-    max-width: 480px;
-    height: 270px;
-    border: 2px groove silver;
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-  }
+.back-button {
+  position: absolute;
+  left: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  padding: 5px 10px;
+}
 
-#inspo3 {
-    width: 100%;
-    max-width: 480px; 
-    height: 270px; 
-    border: 2px solid silver; 
-    box-sizing: border-box; 
-    display: block; 
-    margin: 0 auto; 
-  }
- 
-#inspo2, #inspo3, #inspo4 {
-    width: 80%; 
-    height: 250px;
-    border: 2px solid silver; 
-    margin: 0 auto; 
-    display: block;
-  }
-  
-  
-  
-  
-  
+.page-title {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #fffaf7;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffe4ec;
+}
+
+.back-button {
+  margin-right: auto;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.sketch-item {
+  padding: 1rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 0.5rem;
+}
