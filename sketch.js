@@ -17,8 +17,6 @@ function preload() {
   mapImg = loadImage('img/map.png');
   stickmanImg = loadImage('img/stickman.png'); 
   coinImg = loadImage('img/coin.png'); 
-  coinSound = loadSound('/sound/Win.mp3');
-  moveSound = loadSound('/sound/move.mp3', () => moveSound.setVolume(0.05));
 }
 
 /********* help from youtube videos linked in workbook and chatgpt *********/
@@ -116,7 +114,6 @@ function keyPressed() {
     player.x = nextX;
     player.y = nextY;
 
-    moveSound.play(); 
     collectCoin(); // Check if player collects a coin
   }
 }
@@ -161,7 +158,6 @@ function collectCoin() {
   for (let i = 0; i < coins.length; i++) {
     if (player.x === coins[i].x && player.y === coins[i].y) {
       let coinValue = coins[i].value;
-      coinSound.play(); 
       // Remove the collected coin
       coins.splice(i, 1);
       
