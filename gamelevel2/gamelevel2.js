@@ -14,10 +14,12 @@ let coinImg;
 let mapImg;
 let gemsCollected = 0;
 let bgSound;
-let isPlaying = true;
+let isPlaying = false;
 let toggleButton;
 
+
 function preload() {
+
 
 
     mapImg = loadImage('../imggame2/map2_2.png', 
@@ -31,6 +33,9 @@ function preload() {
   moveSound = loadSound('../sound/move.mp3', () => moveSound.setVolume(0.05));
   bgSound = loadSound('../sound/sonicsound.mp3');
 }
+
+preloadSound();
+setupSound();
 
 /********* help from youtube videos linked in workbook and chatgpt *********/
 function setup() {
@@ -93,6 +98,23 @@ function setup() {
    hintBtn.mousePressed(() => {
      showPopup("Try looking near the corner...", '../imggame2/map2_2.png');
    });
+
+    // Get the toggle button by ID (Make sure this button exists in your HTML)
+  toggleButton = select('#toggle-sound');
+
+  // Set up mousePressed event to handle toggling the sound
+  if (toggleButton) {
+    toggleButton.mousePressed(() => {
+      if (isPlaying) {
+        bgSound.pause(); // Pause the music
+        toggleButton.html('Play Music'); // Change the button text
+      } else {
+        bgSound.loop(); // Start the music
+        toggleButton.html('Pause Music'); // Change the button text
+      }
+      isPlaying = !isPlaying; // Toggle the play/pause state
+    });
+  }
 }
 
 // Handle resizing to keep it responsive
