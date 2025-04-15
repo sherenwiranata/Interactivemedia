@@ -19,7 +19,7 @@ button:hover {
 }
 h1 {
     position: fixed;
-    top: 10vh;
+    top: 5vh;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -47,30 +47,30 @@ h1 {
 }
 
 .week4-link img {
-    width: 15vw;
+    width: 20vw;
     height: auto;
     transition: transform 0.3s ease;
     position: absolute;
-    left: 18%;
-    bottom: 20%;
+    left: 15%;
+    bottom: 10%;
 }
 
 .week5-link img {
-    width: 10vw;
+    width: 20vw;
     height: auto;
     transition: transform 0.3s ease;
     position: absolute;
-    left: 45%;
-    bottom: 40%;
+    left: 40%;
+    bottom: 30%;
 }
 
 .week6-link img {
-    width: 15vw;
+    width: 20vw;
     height: auto;
     transition: transform 0.3s ease;
     position: absolute;
-    right: 18%;
-    bottom: 20%;
+    right: 15%;
+    bottom: 10%;
 }
 
 /* Shared hover effect */
