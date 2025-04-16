@@ -17,47 +17,57 @@
     <h1 class="page-title">Progress</h1>
   </header>
   <p>This week, I added a hint and guide button to my game page to improve user navigation. I also explored the Week 5 content by building on the in-class activity using a filtered camera cursor specifically the POSTERIZE filter, which reminded me of film camera aesthetics. This inspired me to frame this week’s theme around film cameras and metaphors that reflect their visual style.</p>
-  <p>as it reminds me of a film camera. Therefore i decided to make this week’s theme in relation to film cameras and metaphor that represents them. I also started thinking of a new gameplay concept differing from my first maze game where each coin represents a random portal to the weekly content this time i want a count so people have to collect 3 gems to get to the next page.
+  <p>I also started thinking of a new gameplay concept differing from my first maze game where each coin represents a random portal to the weekly content this time i want a count so people have to collect 3 gems to get to the next page.
 </p>
   
   <!-- Grid content -->
   <main class="grid-container">
     <div class="grid-item">
-      <img src="./img/map1.png" alt="Image 1" />
+      <img src="./img/before'.png" alt="Image 1" />
       <p class="description">
-        I redesigned the entire map of the game to make this arena a more challenging level than the previous one. The map is now larger, with additional routes that increase the chances of players getting stuck. Most of these changes were made in the createPaths() function within the setup() block of the p5.js code.
+        In this stage, I focused on designing and implementing three key interactive buttons in my game interface: the Hint, Guide, and Play Music buttons. These buttons are part of the floating nav bar and allow users to get help or toggle the game’s background music.
       </p>
     </div>
     <div class="grid-item">
-      <img src="./img/mapsmall.png" alt="Image 2" />
-      <p class="description"> 
-        I also made the screen shown bigger, by showing more cols and rows, as the previos game was too zoomed in. 
+      <img src="./img/finalgame.png" alt="Image 2" />
+      <p class="description">
+        In this stage, I focused on designing and implementing three key interactive buttons in my game interface: the Hint, Guide, and Play Music buttons. These buttons are part of the floating nav bar and allow users to get help or toggle the game’s background music. While exploring the p5.js library, I came across the showPopup method, which helped me display images and messages in response to user actions. This discovery made it easier to present in-game guides and hints in a non-intrusive way. I also used ChatGPT to help debug some parts of the implementation and deepen my understanding of how things like mousePressed() and conditional rendering work in p5. Prompting ChatGPT to explain certain features gave me a clearer idea of how to manage visibility toggles and combine logic with visual feedback.
       </p>
+      <a href="https://editor.p5js.org/24122891/sketches/vZ0bcxwiF">learn more about showpopup()</a>
     </div>
     <div class="grid-item">
-      <img src="./img/map2_.png" alt="Image 3" />
+      <img src="./img/guide1.png" alt="Image 3" />
       <p class="description">
-        Using Illustrator and Photoshop, I made the map pixel illustration to be put on top of the grid. 
+       Guide button.
     </p>
     </div>
     <div class="grid-item">
-      <img src="./img/finalmapsetup.png" alt="Image 1" />
+      <img src="./img/hint.png" alt="Image 1" />
       <p class="description">
-        This is the final set up of the map and sizing of the camera that shows a section of the map. rows is 5 and cols is 9.
+        Hint button.
       </p>
     </div>
     <div class="grid-item">
-      <img src="./img/bgdraft.png" alt="Image 1" />
+      <img src="./img/togglebutton.png" alt="Image 1" />
       <p class="description">
-        Apart from the map I made a background just in case I needed it. However, later on I decided to remove the platforms and make the opacity smaller.
+        One of the hardest but most interesting parts was implementing background music with the Play Music button. I experimented with loadSound() and .loop() from p5.js:. Key lesson learned: Browsers block autoplay sound unless there’s a user interaction. This tripped me up a lot , at first I was frustrated that sometimes the music wouldn’t play when I refreshed the page. I reflected back on my earlier Kusama sketch and realised that sound needs to be triggered by user input.I also studied the Healing Forest p5 sketch and saw how they delayed sound loading until a click occurred. This inspired me to add a clear toggle interaction.
+    </p>
+    <p>
+        While working on these interactions, I also implemented a dynamic Gem Counter (#gem-counter) that updates when the player collects coins.Once all 3 gems are collected, a popup appears and offers the option to teleport to a new scene.
       </p>
     </div>
     <div class="grid-item">
-      <img src="./img/bgfinal.png" alt="Image 1" />
-      <p class="description">
-        Final background.
-      </p>
-    </div>
+        <video src="./video/week5cursor.mp4" autoplay loop muted playsinline></video>
+        <p class="description">
+            After exploring the different camera filters during the in-class tutorial, I found myself particularly drawn to the posterize filter. I liked how it simplified the colors and gave the visuals a bold, graphic quality.
+        </p>
+        <div class="grid-item">
+            <img src="./img/week5final.png" alt="Image 1" />
+            <p class="description">
+             Here's the final page. Using the posterise filter as an inpiration, I created the page in theme of film cameras.
+            </p>
+          
+          </div>
   </main>
 
 </body>

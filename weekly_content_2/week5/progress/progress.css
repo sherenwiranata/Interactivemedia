@@ -58,6 +58,11 @@ body {
     height: auto;
     border: 2px solid black;
   }
+  .grid-item video {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+  }
   
   .description {
     margin-top: 10px;
