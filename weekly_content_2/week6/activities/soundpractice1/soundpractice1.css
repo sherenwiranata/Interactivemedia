@@ -1,0 +1,22 @@
+.back-button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4vw;
+    padding: 5px 30px;
+    color: #001821;
+    margin-top: 20px;
+}
+
+h1 {
+    position: fixed;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: max-content;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #001821;
+    padding: 10px 20px; 
+    z-index: 999;
+    font-weight: lighter;
+}
