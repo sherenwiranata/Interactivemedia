@@ -1,7 +1,8 @@
 @font-face {
-    font-family: smallFont;
-    src: url(../pixelfont.ttf);
+  font-family: smallFont;
+  src: url(../pixelfont.ttf);
 }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -11,42 +12,78 @@ html, body {
   background-image: url('../imggame2/bg2.png');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 120%; /* or 'cover' depending on the look you want */
-  }
-  /* Heading styles */
-.heading {
-    color: white;
-    text-align: center;
-    margin-top: 40px;
-    font-family: smallFont;
-    font-weight: lighter;
-    font-size: 30px;
-  }
-
-.heading1{
-    color: white;
-    text-align: center;
-    font-family: smallFont;
-    font-weight: lighter;
-    font-size: 30px;
+  background-size: 120%;
 }
-  
-  /* Fake div container styles */
-  .fake-div {
-    position: absolute;
-    cursor: pointer;
-    transition: top 0.01s, left 0.01s;
-  }
-  
-  /* Portal image styling */
-  .portal-img {
-    width: 180px;
-    height: 180px;
-  }
-  
-  /* Status text styling */
-  .status-text {
-    color: lightgray;
-    text-align: center;
-    font-family: smallFont;
-  }
+
+/* Heading styles */
+.heading {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-family: smallFont;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.heading1 {
+  color: white;
+  text-align: center;
+  font-family: smallFont;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+/* Hint Text Styling (Super tiny) */
+.hint-text {
+  color: lightgray;
+  font-family: smallFont;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 400px;
+}
+
+/* Hint Text Styling (Super tiny) */
+.hint-text2 {
+  color: lightgray;
+  font-family: smallFont;
+  font-size: 12px;
+  text-align: center;
+  margin-top: -400px;
+  margin-left: 500px;
+}
+
+/* Fake div container styles */
+.fake-div {
+  position: absolute;
+  cursor: pointer;
+  transition: top 0.01s, left 0.01s;
+}
+
+/* Portal image styling */
+.portal-img {
+  width: 180px;
+  height: 180px;
+}
+
+/* Status text styling */
+.status-text {
+  color: lightgray;
+  text-align: center;
+  font-family: smallFont;
+}
+
+/* Button Styling */
+button {
+  font-family: smallFont;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

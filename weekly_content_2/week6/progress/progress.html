@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progress</title>
+  <link rel="stylesheet" href="./progress.css"/>
+  <!-- p5 libraries -->
+  <script src="../../../libraries/p5.min.js"></script>
+  <script src="../../../libraries/p5.sound.min.js"></script>
+  <script src="./progress.js"></script>
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="top-bar">
+    <a href="../../week6/week6.html" class="back-button">Back</a>
+    <h1 class="page-title">Progress</h1>
+  </header>
+  <p> 
+    The final week before submission was quite hectic, as I spent time finalising many aspects of the game fixing bugs, refining interactions, and adding last-minute touches to polish the overall experience. I also designed the Week 6 content page, which is inspired by vinyl records, incorporating visual and thematic elements that reflect that retro aesthetic.
+  </p>
+  
+  <!-- Grid content -->
+  <main class="grid-container">
+    <div class="grid-item">
+      <img src="./img/portal.png" alt="Image 1" />
+      <p class="description"> 
+        Building on the sound-driven interaction techniques we explored in class, I created a voice-activated portal that only responds to specific voice commands. The idea was to make a button that appears clickable but actually isn't—adding an unexpected twist. Instead of clicking, the user has to solve a riddle and shout out a "spell" to proceed. I used an array of spell-like words (like "abracadabra", "open sesame", "thank you", etc.) as possible commands. The speech recognition runs continuously using the gotSpeech() callback, and once one of the correct words is detected, the user is granted access to the next page. The portal image playfully dodges the user's cursor using a floating div that repositions itself unless the right word has been spoken. This interaction adds a playful sense of frustration and reward, making the experience feel more like solving a puzzle rather than simply clicking through.
+      </p>
+      <a href="https://youtu.be/JMcsNCjkPdo?si=VW-5oIphIG_xx2uR"> Jack's video on unclickable button</a>
+    </div>
+    <div class="grid-item">
+      <img src="./img/portalhint.jpg" alt="Image 2" />
+      <p class="description">
+        I added hints on the page and a give up button for users that can not solve or has a broken microphone
+      </p>
+      <a href="https://editor.p5js.org/24122891/sketches/vZ0bcxwiF">learn more about showpopup()</a>
+    </div>
+    <div class="grid-item">
+      <img src="./img/select game.png" alt="Image 3" />
+      <p class="description">
+        I created a selection game to serve as a bridge between the first and second game. Inspired by Pokémon, it uses collectible-style cards to let players choose the game.
+      </p>
+    </div>
+    <div class="grid-item">
+      <img src="./img/week6page1.png" alt="Image 1" />
+      <p class="description">
+        For the vinyl-inspired week 6 content page, I wanted to create an interactive element where the vinyl spins, mimicking the motion of a record player when hovered over. To achieve this, I applied custom CSS styling to make the vinyl appear as if it were spinning, adding a dynamic and engaging touch to the page. I referenced the code based on an answer in stack over flow.
+      </p>
+      <a href="https://stackoverflow.com/questions/23695090/spin-or-rotate-an-image-on-hover">stack over transform: rotate(360 deg)</a>
+    </div>
+    <div class="grid-item">
+      <img src="./img/week6content2.png" alt="Image 1" />
+      <p class="description">
+        I also explored background colours and font style. Had some issues as well with the positioning of the title. Turns out it was because I commented out the one of the lines.
+      </p>
+    </div>
+        <div class="grid-item">
+            <img src="./img/week6.jpg" alt="Image 1" />
+            <p class="description">
+              For the final page, I added an animation of the treble clef, inspired by Tiana Jimenez’s gravity simulator on p5.js. I used gravity and vector math to simulate natural movement, allowing the treble clef to respond to invisible forces. The effect creates smooth, organic motion that ties into the overall interactive theme.
+            </p>
+          <a href="https://editor.p5js.org/Tatiana.Jimenez/sketches/tXO-rp9Qn">visit Tatiana's code</a>
+          </div>
+  </main>
+
+</body>
+</html>

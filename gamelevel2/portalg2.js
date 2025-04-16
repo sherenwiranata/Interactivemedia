@@ -1,6 +1,9 @@
 let fakeDiv;
 let speechRec;
 let statusP;
+let hintText;
+let hintText2
+let giveUpButton;
 let magicWords = [
   "please", "sorry", "excuse me", "alkazam", 
   "presto", "open sesame", "abracadabra", 
@@ -19,13 +22,19 @@ function setup() {
   let headingLine3 = createElement('h2', 'shout the spell, and you may pass');
   headingLine3.class('heading1');
   
+  // Hint Text 1
+  hintText = createElement('p', 'abracadabra');
+  hintText.class('hint-text');
+
+  // Hint Text 2
+  hintText2 = createElement('p', 'open sesame');
+  hintText2.class('hint-text2');
 
   // Create the floating image container
   fakeDiv = createDiv().class('fake-div');
   let initialW = 180;
-    let initialH = 180;
-    fakeDiv.position((windowWidth - initialW) / 2, (windowHeight - initialH) / 2);
-
+  let initialH = 180;
+  fakeDiv.position((windowWidth - initialW) / 2, (windowHeight - initialH) / 2);
 
   let img = createImg('../imggame2/portal.png', 'portal creature').class('portal-img');
   fakeDiv.child(img);
@@ -47,6 +56,11 @@ function setup() {
   speechRec.continuous = true;
   speechRec.interimResults = false;
   speechRec.start();
+
+  // Give Up Button
+  giveUpButton = createButton('Give Up');
+  giveUpButton.position(windowWidth - 120, windowHeight - 60);
+  giveUpButton.mousePressed(giveUp);
 }
 
 function gotSpeech() {
@@ -65,4 +79,9 @@ function gotSpeech() {
       }
     }
   }
+}
+
+// Give Up Function (transports to a different page)
+function giveUp() {
+  window.location.href = '../weekly_content_2/landing/weekly_content_2_select.html';
 }
