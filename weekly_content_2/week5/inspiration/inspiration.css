@@ -31,7 +31,7 @@ body {
   
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 30px;
   }
@@ -40,24 +40,52 @@ body {
     text-align: center;
   }
 
-  .grid-item video {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid black;
-    display: block;
-    margin: 0 auto;
-  }
   .grid-item img {
     max-width: 100%;
     height: auto;
     border: 2px solid black;
-    display: block;
-    margin: 0 auto;
   }
   
   .description {
     margin-top: 10px;
     font-size: 0.9rem;
   }
+  
+  #iframe, #inspo2 {
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+  }
+
+  #inspo2 {
+    width: 100%;
+    max-width: 480px;
+    height: 270px;
+    border: 2px groove silver;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+  }
+
+#inspo3 {
+    width: 100%;
+    max-width: 480px; 
+    height: 270px; 
+    border: 2px solid silver; 
+    box-sizing: border-box; 
+    display: block; 
+    margin: 0 auto; 
+  }
+ 
+#inspo2, #inspo3, #inspo4 {
+    width: 80%; 
+    height: 250px;
+    border: 2px solid silver; 
+    margin: 0 auto; 
+    display: block;
+  }
+  
+  
+  
   
   
