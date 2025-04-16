@@ -9,7 +9,7 @@ var kusamaSketch = function(p) {
     ];
   
     p.setup = function() {
-      p.createCanvas(900, 400);
+      p.createCanvas(600, 400);
       p.frameRate(1);
     };
   

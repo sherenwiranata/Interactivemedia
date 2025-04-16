@@ -9,7 +9,7 @@ body {
     background-color: white; /* fixed typo from 'background-colour' */
     color: black;
   }
-  .top-right-button {
+  .top-left-button {
     position: fixed;
     top: 20px;
     left: 20px;

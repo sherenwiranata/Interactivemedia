@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    padding: 5px 30px;
+    border: 3px solid red;
+    background-color: transparent;
+    color: red;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+h1 {
+    position: fixed;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: max-content;
+    font-family: monospace;
+    font-size: 6vw;
+    color: rgb(255,245,0);
+    padding: 10px 20px; 
+    z-index: 999;
+}
+
+#title {
+    font-family: smallFont;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgb(226, 8, 255);
+    font-size: 3em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    margin: 100px 0;
+}
+
+.week4-link img {
+    width: 20vw;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+}
+
+.week5-link img {
+    width: 20vw;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 40%;
+    bottom: 30%;
+}
+
+.week6-link img {
+    width: 20vw;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+}
+
+/* Shared hover effect */
+.week4-link img:hover,
+.week5-link img:hover,
+.week6-link img:hover {
+    transform: scale(1.1) rotate(5deg);
+}

@@ -27,9 +27,9 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 6vw;
     color: black;
-    border: 5px solid black; /* this is the correct way to set the border */
-    padding: 10px 20px; /* optional: adds space inside the border */
-    background-color: white; /* optional: makes text stand out */
+    border: 5px solid black;
+    padding: 10px 20px; 
+    background-color: white; 
     z-index: 999;
 }
 
