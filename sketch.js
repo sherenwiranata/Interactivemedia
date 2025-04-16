@@ -14,9 +14,9 @@ let coinImg;
 let mapImg;
 
 function preload() {
-  mapImg = loadImage('/img/map.png');
-  stickmanImg = loadImage('/img/stickman.png'); 
-  coinImg = loadImage('/img/coin.png'); 
+  mapImg = loadImage('img/map.png');
+  stickmanImg = loadImage('img/stickman.png'); 
+  coinImg = loadImage('img/coin.png'); 
 }
 
 /********* help from youtube videos linked in workbook and chatgpt *********/
