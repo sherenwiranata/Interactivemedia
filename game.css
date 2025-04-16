@@ -1,3 +1,12 @@
+@font-face {
+  font-family: smallFont;
+  src: url(../pixelfont.ttf);
+}
+
+body {
+  background-color: black;
+  color: white; 
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -13,6 +22,24 @@ html, body {
     width: 100%;  
     height: 100%; 
   }
+  #backButton {
+    position: absolute;
+    font-family: smallFont;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 40px;
+    background-color: yellow;
+    color: red;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #backButton:hover {
+    opacity: 1;
+  }
+  
   
   #gameContainer {
       position: absolute;
