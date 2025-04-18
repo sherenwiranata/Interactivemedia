@@ -13,6 +13,14 @@ let stickmanImg; //change to character
 let coinImg; 
 let mapImg;
 
+// BUTTON INTERACTIONS NAV BAR
+
+const backBtn = select('#back-btn');
+backBtn.mousePressed(() => {
+  window.location.href = "../levelselect/levelselect.html";
+});
+
+
 function preload() {
   mapImg = loadImage('img/map.png');
   stickmanImg = loadImage('img/stickman.png'); 
