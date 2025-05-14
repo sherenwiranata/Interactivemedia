@@ -48,19 +48,19 @@ html, body {
     background-color: transparent;
     display: flex; /* Display the cards in a row */
     justify-content: center; /* Center the cards horizontally */
-    gap: 120px; /* Space between the cards */
+    gap: 5vw; /* Space between the cards */
 }
 
 /* Style for the images inside cards */
-.levelAcard img, .levelBcard img {
-    width: 30vw; /* Change to desired width */
+.levelAcard img, .levelBcard img, .levelCcard img{
+    width: 25vw; /* Change to desired width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Prevents any unwanted space below the image */
     transition: filter 0.3s ease; /* Smooth transition for the filter */
 }
 
 /* Darken image on hover */
-.levelAcard img:hover, .levelBcard img:hover {
+.levelAcard img:hover, .levelBcard img:hover, .levelCcard img:hover {
     filter: brightness(0.7); /* Darkens the image */
     transform: scale(1.05); /* Slightly enlarge the card */
 }

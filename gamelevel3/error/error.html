@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Circuit Ruin Error Page</title>
+</head>
+ <!-- CSS file -->
+ <link rel="stylesheet" type="text/css" href="error.css">
+ <!-- p5 libraries -->
+<script src="../libraries/p5.min.js"></script>
+<script src="../libraries/p5.sound.min.js"></script>
+<!-- JavaScript file -->
+<script src="error.js" async></script>
+<body>
+    <div class="glitch-intro">
+        <video autoplay muted loop playsinline>
+            <source src="video/glitch.mp4" type="video/mp4" />
+          </video>
+    </div> 
+    <div class="content">
+  <div class="glitch">SYSTEM ERROR!</div>
+
+  <div class="terminal-text">
+    Looks like a connection in the system<br>
+    has been disrupted.<br>
+    Initiate reboot to restore access.<br>
+  </div>
+  <button class="reboot-btn" onclick="location.href='../reboot/reboot.html'">
+    REBOOT
+  </button>
+</div>
+</body>
+</html>

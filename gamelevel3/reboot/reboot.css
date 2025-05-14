@@ -1,0 +1,97 @@
+@font-face {
+    font-family: smallFont;
+    src: url(../../pixelfont.ttf);
+  }
+  body{
+    background: black;
+    font-family: smallFont;
+  }
+  
+  #boot-text {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    text-align: left;
+    width: 80%;
+    white-space: pre-wrap;
+    margin-top: 2rem;
+    font-family: smallFont; /* Ensure this is set correctly */
+  }
+  .reboot-screen {
+    background: black;
+    color: white;
+    font-family: smallFont;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .loading-bar-container {
+    width: fit-content;
+    border: clamp(1px, 0.3vw, 5px) solid white;
+    background: black;
+    padding: clamp(3px, 0.5vw, 20px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-bar {
+    display: flex;
+    gap: clamp(2px, 0.3vw, 5px);
+  }
+  
+  .block {
+    width: clamp(1.5rem, 3vw, 3rem);
+    height: clamp(1.5rem, 3vw, 3rem);
+    background-color: rgb(0, 255, 0);
+    opacity: 0;
+    animation: appear 0.3s forwards;
+  }
+  
+  .block:nth-child(1)  { animation-delay: 0s; }
+  .block:nth-child(2)  { animation-delay: 0.2s; }
+  .block:nth-child(3)  { animation-delay: 0.4s; }
+  .block:nth-child(4)  { animation-delay: 0.6s; }
+  .block:nth-child(5)  { animation-delay: 1.6s; }
+  .block:nth-child(6)  { animation-delay: 2.2s; }
+  .block:nth-child(7)  { animation-delay: 2.9s; }
+  .block:nth-child(8)  { animation-delay: 3.7s; }
+  .block:nth-child(9)  { animation-delay: 3.9s; }
+  .block:nth-child(10) { animation-delay: 4.2s; }
+  
+  @keyframes appear {
+    to { opacity: 1; }
+  }
+  
+  .loading-text {
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-family: smallFont, monospace;
+    margin-top: 1rem;
+    letter-spacing: 4px;
+  }
+  
+  .boot-sequence {
+    font-size: clamp(0.5rem, 2vw, 2rem);
+    text-align: left;
+    width: 80%;
+    white-space: pre-wrap;
+    margin-top: 2rem;
+    font-family: smallFont;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.1%, 100% { opacity: 0; }
+  }
