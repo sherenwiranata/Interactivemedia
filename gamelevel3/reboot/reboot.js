@@ -1,11 +1,11 @@
 const bootLines = [
-    "Initializing core modules...",
     "Loading memory sectors...",
+    "Some sleepless nights...",
     "Reestablishing connection protocols...",
-    "Verifying security layer...",
+    "Five mental breakdowns later...",
     "System parameters: OK",
     "Running diagnostics...",
-    "All systems operational.",
+    "Game unavailable",
     ">> SYSTEM RESTORED."
   ];
   
@@ -14,7 +14,6 @@ const bootLines = [
   const loadingContainer = document.querySelector(".loading-bar-container");
   const loadingText = document.querySelector(".loading-text");
   
-  // Wait until last block animation finishes (2s)
   setTimeout(() => {
     loadingContainer.style.display = "none";
     loadingText.style.display = "none";
@@ -24,12 +23,32 @@ const bootLines = [
   
   function showBootText() {
     let i = 0;
+  
     const typeLine = () => {
       if (i < bootLines.length) {
         bootText.textContent += bootLines[i] + "\n";
         i++;
         setTimeout(typeLine, 600);
+      } else {
+        showContinuePrompt();
       }
     };
+  
     typeLine();
+  }
+  
+  function showContinuePrompt() {
+    const continueMessage = document.createElement("div");
+    continueMessage.textContent = "Press any key or tap to continue...";
+    continueMessage.classList.add("continue-msg");
+    bootSequence.appendChild(continueMessage);
+  
+    setTimeout(() => {
+      document.addEventListener("keydown", goToNextPage);
+      document.addEventListener("touchstart", goToNextPage);
+    }, 1000);
+  }
+  
+  function goToNextPage() {
+    window.location.href = "nextpage.html"; // Replace with your target page
   }
