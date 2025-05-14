@@ -3,10 +3,9 @@ const bootLines = [
     "Some sleepless nights...",
     "Reestablishing connection protocols...",
     "Five mental breakdowns later...",
-    "System parameters: OK",
     "Running diagnostics...",
     "Game unavailable",
-    ">> SYSTEM RESTORED."
+    ">> CONTENT RESTORED."
   ];
   
   const bootText = document.getElementById("boot-text");
@@ -50,5 +49,5 @@ const bootLines = [
   }
   
   function goToNextPage() {
-    window.location.href = "nextpage.html"; // Replace with your target page
+    window.location.href = "../../weekly_content_3/landing/landing.html"; // Replace with your target page
   }

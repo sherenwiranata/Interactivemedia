@@ -1,0 +1,20 @@
+* {
+    cursor: none; /* hide default */
+  }
+  
+  .glitch-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: white;
+    pointer-events: none;
+    animation: glitch 0.1s infinite alternate;
+  }
+  
+  @keyframes glitch {
+    0%   { transform: translate(0, 0); }
+    50%  { transform: translate(-2px, 1px); }
+    100% { transform: translate(2px, -1px); }
+  }
