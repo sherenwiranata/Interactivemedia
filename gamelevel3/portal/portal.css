@@ -1,0 +1,86 @@
+@font-face {
+    font-family: smallFont;
+    src: url(../../pixelfont.ttf);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;       /* vertical center */
+    justify-content: center;   /* horizontal center */
+    background-color: white;
+    font-family: smallFont;
+  }
+  
+  
+  /* Container holds image + text in vertical stack */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* text aligned left */
+  }
+  
+  /* Image */
+  .upsetdocument {
+    width: clamp(2rem, 2.5vw, 2.5rem); /* Size similar to Chrome icon */
+    margin-bottom: 2rem;
+  }
+  
+  .upsetdocument img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Text styling */
+  .terminal-text {
+    font-size: 1rem;
+    color: #202124;
+    line-height: 1.7;
+  }
+
+  .headline {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #202124;
+  }
+  
+  .subhead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #5f6368;
+  }
+  
+  .instructions {
+    font-size: 1.1rem;
+    color: #5f6368;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .error-code {
+    font-size: 1.1rem;
+    color: #80868b;
+  }
+
+  .analog-button {
+    display: inline-block;
+    padding: 0.5em 1.1em;
+    background-color: #2c69e1;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 2rem;
+    text-align: center;
+    transition: background-color 0.2s ease;
+  }
+  
+  .analog-button:hover {
+    background-color: #1658de;
+  }
+  
+  

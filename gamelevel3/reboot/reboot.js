@@ -49,5 +49,5 @@ const bootLines = [
   }
   
   function goToNextPage() {
-    window.location.href = "../../weekly_content_3/landing/landing.html"; // Replace with your target page
+    window.location.href = "../portal/portal.html"; // Replace with your target page
   }
