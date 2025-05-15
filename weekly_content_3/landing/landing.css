@@ -1,6 +1,32 @@
+/* Regular weight */
+@font-face {
+  font-family: 'libBas';
+  src: url('../LibreBaskerville-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold weight */
+@font-face {
+  font-family: 'libBas';
+  src: url('../LibreBaskerville-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
     background-color: #c5bcb3; /* off-white base */
     background-image: url('./img/natural-paper.png'); /* path to your paper texture */
     background-repeat: repeat;
     background-size: auto; /* or 'contain' or 'cover' but 'auto' or repeat is better for texture */
+  }
+  h1{
+    font-size: 10vw;
+    font-family: libBas;
+    font-weight: bold;
+  }
+
+  #title {
+    font-family: libBas;
+    font-weight: normal;
   }
