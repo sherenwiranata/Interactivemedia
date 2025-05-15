@@ -96,7 +96,7 @@
   }
 
   .continue-msg {
-    color: white;
+    color: rgb(0, 255, 0);
     font-family: smallFont;
     font-size: clamp(1rem, 1.5vw, 2rem);
     margin-top: clamp(0.2rem, 1vw, 0.5rem);
@@ -108,5 +108,5 @@
   
   @keyframes blink {
     20%, 50% { opacity: 1; }
-    50.1%, 100% { opacity: 0.8; }
+    50.1%, 100% { opacity: 0.7; }
   }
