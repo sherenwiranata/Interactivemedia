@@ -128,61 +128,74 @@
 
   
   
-  /***************** Right content area ****************/
+ /* Activity block container */
+.activity-block {
+  max-width: 720px; /* Wider width */
+  width: 100%;
+  padding: 0 0 30px 0;
+  margin: 0 auto;
+  font-family: 'libBas', serif;
+}
+
+.activity-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  margin-top: 0px;
+  border-bottom: 2px solid black; 
+  padding-bottom: 6px; 
+}
+
+/* Activity image */
+.activity-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Parts used and description */
+.activity-block p {
+  text-align: justify;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #111;
+}
+
+/* Parts used label styling */
+.activity-block p strong {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.right-inner {
+  margin-left: 320px; 
+  padding: 40px;
+  overflow-y: auto;
+  width: calc(100% - 320px);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  #containerweek7 {
+    flex-direction: column;
+  }
+
+  .left-inner {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
   .right-inner {
-    margin-left: 320px; /* Leave space for sidebar */
-    padding: 40px;
-    overflow-y: auto;
-    width: calc(100% - 320px);
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
   }
-  
-  .titleA1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 20px;
-  }
-  
-  /* Main heading */
-  #headingW1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Paragraphs and links */
-  p {
-    max-width: 650px;
-    margin-bottom: 16px;
-    color: #444;
-  }
-  
-  a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive */
-  @media screen and (max-width: 768px) {
-    #containerweek7 {
-      flex-direction: column;
-    }
-  
-    .left-inner {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-  
-    .right-inner {
-      margin-left: 0;
-      width: 100%;
-      padding: 20px;
-    }
-  }
-  
+}
