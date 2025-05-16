@@ -1,7 +1,31 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #fdfdfd;
+/* Regular weight */
+@font-face {
+    font-family: 'libBas';
+    src: url('../LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Bold weight */
+  @font-face {
+    font-family: 'libBas';
+    src: url('../LibreBaskerville-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  body {
+    font-family: libBas, serif;
+    font-size: 0.9rem; /* 18px for comfortable reading */
+    line-height: 1.5; /* good for readability */
+    max-width: 90vw; /* optional: keeps line length optimal */
+    margin: 0 auto; /* centers the content */
+    padding: 2rem;
+    background-color: #c5bcb3;
+    background-image: url('../img/natural-paper.png');
+    background-repeat: repeat;
+    background-size: auto;
+    color: #000;
   }
   
   /* Updated container ID */
@@ -14,7 +38,10 @@ body {
   /* Sidebar */
   .left-inner {
     width: 300px;
-    background-color: #111;
+    background-color: #c5bcb3;
+    background-image: url('../img/natural-paper.png');
+    background-repeat: repeat;
+    background-size: auto;
     color: white;
     padding: 20px;
     position: fixed;
@@ -22,6 +49,7 @@ body {
     left: 0;
     bottom: 0;
     overflow-y: auto;
+    border-right: 1px solid black; /* <-- Add this */
   }
   
   /* Sidebar heading */
