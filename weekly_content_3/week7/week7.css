@@ -185,17 +185,51 @@
 @media screen and (max-width: 768px) {
   #containerweek7 {
     flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    height: auto; /* Allow natural height */
   }
 
   .left-inner {
     width: 100%;
     height: auto;
     position: relative;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
   }
 
   .right-inner {
-    margin-left: 0;
     width: 100%;
+    margin: 0 auto; /* Center the right container */
     padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .activity-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    text-align: center;
+  }
+
+  .knockout-text {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .week-link,
+  .week-link-I {
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+
+  .activity-block p {
+    font-size: 0.95rem;
+  }
+
+  .activity-image {
+    max-width: 100%;
+    height: auto;
   }
 }

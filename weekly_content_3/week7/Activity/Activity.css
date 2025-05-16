@@ -133,7 +133,7 @@ background-color: white;
 .activity-block {
   max-width: 720px; /* Wider width */
   width: 100%;
-  padding: 0 0 30px 0; /* Bottom space between entries */
+  padding: 0 0 30px 0;
   margin: 0 auto;
   font-family: 'libBas', serif;
 }
@@ -146,8 +146,8 @@ background-color: white;
   margin-bottom: 12px;
   letter-spacing: 0.5px;
   margin-top: 0px;
-  border-bottom: 2px solid black; /* LINE UNDER TITLE */
-  padding-bottom: 6px; /* space between text and line */
+  border-bottom: 2px solid black; 
+  padding-bottom: 6px; 
 }
 
 /* Activity image */
@@ -175,31 +175,64 @@ background-color: white;
   text-align: left;
 }
 
-
-
-
 .right-inner {
-  margin-left: 320px; /* Leave space for sidebar */
+  margin-left: 320px; 
   padding: 40px;
   overflow-y: auto;
   width: calc(100% - 320px);
 }
 
 /* Responsive */
+/* Responsive */
 @media screen and (max-width: 768px) {
   #containerweek7 {
     flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+    height: auto; /* Allow natural height */
   }
 
   .left-inner {
     width: 100%;
     height: auto;
     position: relative;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
   }
 
   .right-inner {
-    margin-left: 0;
     width: 100%;
+    margin: 0 auto; /* Center the right container */
     padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .activity-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    text-align: center;
+  }
+
+  .knockout-text {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .week-link,
+  .week-link-I {
+    font-size: 1rem;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+
+  .activity-block p {
+    font-size: 0.95rem;
+  }
+
+  .activity-image {
+    max-width: 100%;
+    height: auto;
   }
 }
+
