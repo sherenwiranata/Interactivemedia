@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fdfdfd;
+  }
+  
+  /* Updated container ID */
+  #containerweek7 {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .left-inner {
+    width: 300px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  
+  /* Sidebar heading */
+  .headingweek7 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Updated button container */
+  .weeks7 a {
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  /* Buttons inside sidebar */
+  #weektabs {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  #weektabs:hover {
+    background-color: #666;
+  }
+  
+  /* Right content area */
+  .right-inner {
+    margin-left: 320px; /* Leave space for sidebar */
+    padding: 40px;
+    overflow-y: auto;
+    width: calc(100% - 320px);
+  }
+  
+  .titleA1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  /* Main heading */
+  #headingW1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraphs and links */
+  p {
+    max-width: 650px;
+    margin-bottom: 16px;
+    color: #444;
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    #containerweek7 {
+      flex-direction: column;
+    }
+  
+    .left-inner {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .right-inner {
+      margin-left: 0;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
