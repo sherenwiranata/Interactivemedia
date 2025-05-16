@@ -80,7 +80,7 @@
   font-weight: bold;
   font-size: calc(300px * 0.11); /* responsive approx 11% of container */
   
-  background: url('../img/textbackground2.png') center center;
+  background: url('./img/textbackground2.jpg') center center;
   background-size: cover;
 
   color: transparent;
