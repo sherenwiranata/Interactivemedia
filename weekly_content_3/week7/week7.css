@@ -51,39 +51,84 @@
     overflow-y: auto;
     border-right: 1px solid black; /* <-- Add this */
   }
+
+  .back-button{
+    left: 0;
+    font-size: 0.9rem;
+    color: black;
+    text-decoration: none;
+    }
+
+    .back-button:hover {
+        background-color: white;
+    }
   
   /* Sidebar heading */
-  .headingweek7 {
-    font-size: 24px;
+  /* Black background box for heading */
+.knockout-box {
+  background-color: black;
+  padding: 0.3rem 15px;
+  max-width: 300px; /* match container width */
+  margin: clamp(16px, 10%, 50px) 0 clamp(16px, 5%, 30px) 0;
+  box-sizing: border-box;
+  border-radius: 0; /* optional */
+}
+
+/* Image-filled knockout text */
+.knockout-text {
+  font-family: 'libBas', serif;
+  font-weight: bold;
+  font-size: calc(300px * 0.11); /* responsive approx 11% of container */
+  
+  background: url('../img/textbackground2.png') center center;
+  background-size: cover;
+
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+/* Plain text links styled like back-button but with hover effect */
+.week-link {
+  font-family: 'libBas', serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px 0;
+  display: inline-block;
+  max-width: 270px;
+  box-sizing: border-box;
+}
+
+.week-link-I {
+    font-family: 'libBas', serif;
     font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  
-  /* Updated button container */
-  .weeks7 a {
-    display: block;
-    margin-bottom: 12px;
-  }
-  
-  /* Buttons inside sidebar */
-  #weektabs {
-    width: 100%;
-    padding: 12px;
-    font-size: 14px;
-    background-color: #444;
-    color: white;
-    border: none;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: underline;
     cursor: pointer;
-    text-align: left;
-    transition: background-color 0.3s ease;
+    padding: 15px 0;
+    display: inline-block;
+    max-width: 270px;
+    box-sizing: border-box;
   }
+
+/* Hover effect: underline and slight color brighten */
+.week-link:hover {
+  text-decoration: underline;
+  background-color: white;
+}
+
   
-  #weektabs:hover {
-    background-color: #666;
-  }
   
-  /* Right content area */
+  /***************** Right content area ****************/
   .right-inner {
     margin-left: 320px; /* Leave space for sidebar */
     padding: 40px;
