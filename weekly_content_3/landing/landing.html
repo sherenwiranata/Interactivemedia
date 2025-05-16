@@ -12,26 +12,83 @@
     <script src="./landing.js" async></script>
 </head>
 <body>
-    <button onclick="window.location.href='../../index.html'">Home</button>
-    <h1>CONGRATS</h1>
-    <marquee behavior="alternate" scrollamount="9" id="title">
-        welcome to 2B   welcome to 2B   welcome to 2B   welcome to 2B   welcome to 2B
-      </marquee>
-      <div class="week-container">
-        <a href="../week4/week4.html" class="week4-link">
-          <img src="./img/week4.png" alt="week4">
-        </a>
-        <a href="../week5/week5.html" class="week5-link">
-          <img src="./img/week5.png" alt="week5">
-        </a>
-        <a href="../week6/week6.html" class="week6-link">
-          <img src="./img/week6.png" alt="week6">
-        </a>
-      </div>
+  <header>
+    <a href="../../" class="back-button">BACK</a>
+    <div class="title">WORKBOOK 2C</div>
+    <div class="issue">ISSUE C, 2025</div>
+  </header>  
 
-      <a href="../../gamelevel2/gamelevel2.html" id="corner-link">
-        <img src="./img/portaltogame.png" alt="Back to Swampy Dungeon">
-      </a>
-     
+  <section class="section">
+    <div class="knockout-box">
+      <span class="knockout-text">PHYSICAL COMPUTING</span>
+    </div>
+  </section>
+                  <!-- my experience section-->
+  <section class="section experience-section">
+    <div class="experience-text">
+      <h3><strong>MY EXPERIENCE</strong></h3>
+      <p>
+        I’ve used to be curious about building robots. As a kid, one of my dreams was to make my own Baymax, and this subject gave me a chance to learn some basic skills that could be part of that, which was really cool. I also had an idea in high school to make a light show with Arduino, but the physical computing side always seemed too complicated.
+
+        This project helped me get past that. Although some parts were tricky, I saw how creative and flexible Arduino can be. I’m glad I gave it a try and learned something new. It opened up a different way of thinking about making, and maybe I’ll come back to it someday with a new idea.
+      </p>
+    </div>
+    <div class="experience-image">
+      <img src="./img/arduino.jpg" alt="arduino" />
+    </div>
+  </section>
+
+                <!-- weekly content -->
+  <section class="section columns">
+    <div class="column">
+      <a href="../week7/week7.html" class="week-link">WEEK SEVEN</a>
+      <p>
+        This was our first week learning Arduino, and it was actually pretty fun. We got to know the components we’ll be working with and learned about basic circuits and what they do. Even though I studied physics in high school, I still found circuits a little confusing at times. But overall, it was interesting and reminded me of some of the hands-on learning I used to enjoy.
+        <div class="weeklink">
+          <a href="../week7/week7.html">visit section</a>
+        </div>
+      </p>
+    </div>
+
+    <div class="column">
+      <a href="weight.html" class="week-link">WEEK EIGHT</a>
+      <p>
+        This week we started using Tinkercad and the Arduino IDE. It took a while for me to really understand the process, since it felt kind of confusing and all over the place at first. Looking at the code provided by Tinkercad also took some time to get used to, I definitely felt overwhelmed and zoned out for a moment. But once I took a step back and gave it some time, things started to fall into place. The servo motor was really cool, though. I liked seeing it in action!
+      </p>
+      <div class="weeklink">
+        <a href="../week7/week7.html">visit section</a>
+      </div>
+    </div>
+
+    <div class="column">
+      <a href="wnine.html" class="week-link">WEEK NINE</a>
+      <p>
+        Brain = fried. This was definitely the toughest week so far. I struggled with the Processing app, I didn’t realise I could just use VS Code, so I kept trying to download Processing, but it only loaded Java, not p5.
+        On the bright side, using a potentiometer to control a visual element in p5 through Arduino and the breadboard was super cool. It’s exciting to see the physical and digital come together like that.
+        <div class="weeklink">
+          <a href="../week7/week7.html">visit section</a>
+        </div>
+      </p>
+    </div>
+  </section>
+
+                        <!-- extras -->
+  <section class="section extras-section">
+    <div class="extras-left">
+      <h3><strong>TIME IS TICKING!</strong></h3>
+      <div class="img-box"><img src="./img/code.jpg" alt="time module" /></div>
+      <p>
+        Time was limited to complete this workbook, and since p5 and interactivity are not graded, I focused on content. However, there are things I’d like to improve after submission, like adding glitch sounds. I struggled with this due to browsers blocking autoplay. In Workbook 2B, my only solution was a toggle button, but that doesn’t fit this concept. A better option might be to trigger the animation and sound on the game select page instead of the error page.
+      </p>
+    </div>
+    <div class="extras-right">
+      <div class="img-box"><img src="./img/tmstraining.jpg" alt="tms training" /></div>
+      <h3><strong>TMS TRAINING</strong></h3>
+      <p>
+        For this part of the subject, we had to complete training to access the Telstra Maker Space. I found the experience really fun and enjoyable. I especially liked the physical aspect of the process, such as cutting wood and drilling holes, which felt surprisingly therapeutic. It was a refreshing change from the digital work we’ve done so far and required a different kind of precision, based on physical actions rather than just mental focus. That difference might not stand out to everyone, but for me, it made the experience especially rewarding.
+      </p>
+    </div>
+  </section>
+
 </body>
 </html>
