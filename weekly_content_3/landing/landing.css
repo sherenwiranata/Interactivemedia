@@ -1,48 +1,44 @@
 /* Regular weight */
 @font-face {
   font-family: 'libBas';
-  src: url('../LibreBaskerville-Regular.ttf') format('truetype');
-  font-weight: normal;
+  src: url('../Imbue-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
 /* Bold weight */
 @font-face {
   font-family: 'libBas';
-  src: url('../LibreBaskerville-Bold.ttf') format('truetype');
-  font-weight: bold;
+  src: url('../Imbue-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 800;
   font-style: normal;
 }
 
 body {
   font-family: libBas, serif;
-  font-size: 0.9rem; /* 18px for comfortable reading */
+  font-size: 1.2rem; /* 18px for comfortable reading */
   line-height: 1.5; /* good for readability */
   max-width: 90vw; /* optional: keeps line length optimal */
   margin: 0 auto; /* centers the content */
-  padding: 2rem;
   background-color: #c5bcb3;
   background-image: url('./img/natural-paper.png');
   background-repeat: repeat;
   background-size: auto;
-  color: #000;
+  color: rgb(36, 33, 33);
 }
 
-  .knockout-box {
-    background-color: black;
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-  }
-
+/*********************** header ******************/
   header {
     position: relative;
-    border-bottom: 0.1vw solid black;
+    border-bottom: 0.1vw solid rgb(36, 33, 33);
     padding-bottom: 1.5rem; /* More space below */
     margin-bottom: 2rem; /* More space before next content */
     font-size: 1.5vw;
     height: 2rem;
   }
   
+  /***** back button *****/
+
   .back-button, .issue {
     position: absolute;
     top: 0;
@@ -50,8 +46,8 @@ body {
   
   .back-button {
     left: 0;
-    font-size: 0.9rem;
-    color: black;
+    font-size: 2rem;
+    color: rgb(36, 33, 33);
     text-decoration: none;
   }
   
@@ -59,31 +55,72 @@ body {
     background-color: white;
   }
   
+/****** issue *****/
+
   .issue {
     right: 0;
-    font-size: 0.9rem;
+    font-size: 2rem;
   }
   
   .title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   
   .section {
     margin-bottom: 2rem;
   }
+
+/***************** physical computing title *******************/
+
+  .knockout-box {
+    width: 100%;
+    background-color: rgb(36, 33, 33);
+    text-align: center;
+    padding: 0rem; /* no vertical padding */
+    border-top: 1px solid rgb(36, 33, 33);
+    border-bottom: 2px solid rgb(36, 33, 33);
+    box-sizing: border-box;
+    overflow: hidden; /* clips anything outside the box */
+    line-height: 1; /* helps prevent extra height from line spacing */
+  }
+  
+  .knockout-text1, .knockout-text2{
+    font-size: clamp(5rem, 20vw, 16rem); /* keep it big */
+    font-weight: bolder;
+    font-family: 'libBas', serif;
+    line-height: 0.8; /* makes the text take up less vertical space */
+    margin: 0; /* remove default margin */
+  
+    background: url('./img/textbackground2.png') center center;
+    background-size: cover;
+  
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .knockout-text1{
+    font-size: clamp(5rem, 30vw, 27rem);
+  }
+  .knockout-text2{
+    font-size: clamp(5rem, 25vw, 22rem);
+  }
+
+  /********************************** Experience ********************************/
   
   /* New flex layout for the experience section */
   .experience-section {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    align-items: flex-start;
     margin-bottom: 4rem;
     margin-top: 4rem;
+    align-items: stretch;
   }
   
   /* Left side text: 1/4 of space */
@@ -93,13 +130,13 @@ body {
   }
 
   .experience-text h3 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Slightly larger */
-    margin-bottom: 1rem; /* Smaller gap between h3 and p */
+    font-size: clamp(1.8rem, 10vw, 4rem); /* Slightly larger */
+    margin-bottom: 0; /* Smaller gap between h3 and p */
     margin-top: 0;
   }
   
   .experience-text p {
-    color: #292929;
+    color: rgb(36, 33, 33);
     margin-right: 2rem;
     text-align: justify;
     margin-top: 0; /* Ensure no extra gap from the top of <p> */
@@ -111,61 +148,16 @@ body {
     flex: 2; /* smaller than before */
   display: flex;
   justify-content: flex-end; /* push image to the right */
+  margin-top: 1.6rem;
   }
   
   .experience-image img {
     width: 100%;
-    border: 4px solid black;
+    border: 1px solid rgb(36, 33, 33);
     object-fit: cover;
   }
-  
-  /* Full-width knockout box */
-  .knockout-box {
-    width: 100%;
-    background-color: black;
-    text-align: center;
-    padding: 1rem 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  
-  .knockout-text {
-    font-size: clamp(2rem, 8vw, 6rem); /* adjusts size to fit screen */
-    font-weight: bold;
-    font-family: 'libBas', serif;
-  
-    background: url('./img/textbackground2.png') center center;
-    background-size: cover;
-  
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    white-space: nowrap; /* prevents wrapping to second line */
-    display: inline-block;
-  }
-  
-  
-  /*
-  
-  @media (max-width: 768px) {
-    .experience-section {
-      flex-direction: column;
-    }
-  
-    .experience-text,
-    .experience-image {
-      flex: 1 1 100%;
-    }
-  
-    .knockout-text {
-      font-size: 8vw;
-    }
-  }
-    */
-
+ 
+  /************************************ weeek *****************************************/
 
     .columns {
       display: flex;
@@ -177,7 +169,7 @@ body {
     
     .column {
       flex: 1;
-      padding: 0 2rem;
+      padding: 0 4rem;
     }
 
     .column a {
@@ -186,12 +178,12 @@ body {
     
     /* Add vertical borders between columns only */
     .column:not(:last-child) {
-      border-right: 1px solid black;
+      border-right: 1px solid rgb(36, 33, 33);
     }
 
     .week-link {
       font-size: clamp(1.5rem, 5vw, 2.5rem);
-      color: black;
+      color: rgb(36, 33, 33);
       font-weight: bold;
       text-decoration: none;
       transition: color 0.3s;
@@ -269,7 +261,8 @@ body {
   text-align: justify;
 }
 
-/* Make responsive on small screens */
+
+/* 
 @media (max-width: 768px) {
   body {
     padding: 1rem;
@@ -356,5 +349,5 @@ body {
     text-align: center;
   }
 }
-
+Make responsive on small screens */
   
