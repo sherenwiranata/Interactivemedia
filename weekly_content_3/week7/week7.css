@@ -1,18 +1,19 @@
 /* Regular weight */
+/* Regular weight */
 @font-face {
-    font-family: 'libBas';
-    src: url('../LibreBaskerville-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Bold weight */
-  @font-face {
-    font-family: 'libBas';
-    src: url('../LibreBaskerville-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
+  font-family: 'libBas';
+  src: url('../Imbue-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Bold weight */
+@font-face {
+  font-family: 'libBas';
+  src: url('../Imbue-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
 
   body {
     font-family: libBas, serif;
@@ -52,33 +53,42 @@
     border-right: 1px solid black; /* <-- Add this */
   }
 
-  .back-button{
-    left: 0;
-    font-size: 0.9rem;
+  .back-button-wrapper {
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* optional spacing below the line */
+  }
+  
+  .back-button {
+    font-size: 2rem;
     color: black;
     text-decoration: none;
-    }
-
-    .back-button:hover {
-        background-color: white;
-    }
+  }
+  
+  .back-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
   
   /* Sidebar heading */
-  /* Black background box for heading */
+  /********************* left bar week title *******************/
 .knockout-box {
-  background-color: black;
+  background-color: rgb(36, 33, 33);
   padding: 0.3rem 15px;
   max-width: 300px; /* match container width */
   margin: clamp(16px, 10%, 50px) 0 clamp(16px, 5%, 30px) 0;
   box-sizing: border-box;
   border-radius: 0; /* optional */
+  margin-top: 0;
 }
 
 /* Image-filled knockout text */
-.knockout-text {
+.knockout-text1, .knockout-text2{
   font-family: 'libBas', serif;
   font-weight: bold;
-  font-size: calc(300px * 0.11); /* responsive approx 11% of container */
+  font-size: clamp(1.8rem, 12vw, 9.4rem); /* responsive approx 11% of container */
   
   background: url('./img/textbackground2.jpg') center center;
   background-size: cover;
@@ -91,14 +101,20 @@
   white-space: nowrap;
   user-select: none;
   text-transform: uppercase;
+  margin-top: 0;
+  line-height: 0.8;
 }
+
+.knockout-text2{
+  font-size: clamp(1.8rem, 12vw, 9.2rem);
+}
+
 
 /* Plain text links styled like back-button but with hover effect */
 .week-link {
   font-family: 'libBas', serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: black;
+  font-size: clamp(1.2rem, 10vw, 4.2vw);
+  color: rgb(36, 33, 33);
   text-decoration: none;
   cursor: pointer;
   padding: 15px 0;
@@ -109,9 +125,8 @@
 
 .week-link-I {
     font-family: 'libBas', serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: black;
+    font-size: clamp(1.2rem, 10vw, 4.2vw);
+    color: rgb(36, 33, 33);
     text-decoration: underline;
     cursor: pointer;
     padding: 15px 0;
@@ -138,14 +153,14 @@
 }
 
 .activity-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 10vw, 10vw);
   font-weight: bold;
   text-transform: uppercase;
   text-align: left;
   margin-bottom: 12px;
   letter-spacing: 0.5px;
   margin-top: 0px;
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid rgb(36, 33, 33); 
   padding-bottom: 6px; 
 }
 
