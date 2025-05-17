@@ -42,15 +42,13 @@
             <source src="./video/test.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div class="parts-used"><strong>Parts used:</strong>Arduino, Resistor, Breadboard,Wire and Potetiometer</div>
+          <div class="parts-used"><strong>Parts used:</strong>Arduino, Breadboard, Wire and Potetiometer</div>
           <p class="activity-description">
-            In this class activity, we created a circuit where a photoresistor detects light levels and triggers a servo motor to move. As light intensity changes, the servo responds by rotating to a new position.
-            This exercise introduced how sensors and actuators can interact to create responsive systems. A key takeaway for me was realizing how real-world inputs like light can drive motion, opening up possibilities for playful or functional interactions, ike machines that follow sunlight or respond to environmental changes.
+            Before using p5.js, we first tested the circuit with Arduino IDE using the code provided in milanote allowed us to confirm the circuit was working correctly. As seen in the video, the circuit is properly connected. Turning the potentiometer changes the values displayed in the Serial Monitor, indicating that the input is being read and transmitted as expected.
           </p>
         <img src="./img/files.png" alt="Activity Image" class="activity-image" />
         <p class="activity-description">
-          In this class activity, we created a circuit where a photoresistor detects light levels and triggers a servo motor to move. As light intensity changes, the servo responds by rotating to a new position.
-          This exercise introduced how sensors and actuators can interact to create responsive systems. A key takeaway for me was realizing how real-world inputs like light can drive motion, opening up possibilities for playful or functional interactions, ike machines that follow sunlight or respond to environmental changes.
+          I struggled with the Processing app, I didn’t realise I could just use VS Code, so I kept trying to download Processing, but it only loaded Java, not p5. The picture above are my files I opened in VS code to do this as I couldnt use the processing app.
         </p>
       
           <video
@@ -63,8 +61,7 @@
             Your browser does not support the video tag.
           </video>
          <p class="activity-description">
-          In this class activity, we created a circuit where a photoresistor detects light levels and triggers a servo motor to move. As light intensity changes, the servo responds by rotating to a new position.
-          This exercise introduced how sensors and actuators can interact to create responsive systems. A key takeaway for me was realizing how real-world inputs like light can drive motion, opening up possibilities for playful or functional interactions, ike machines that follow sunlight or respond to environmental changes.
+          I finally got everything working after a series of missteps and troubleshooting. One key issue was that a separate Serial Monitor from the Arduino IDE was still open, which interfered with the connection and prevented my p5.js sketch from running properly. After closing the conflicting tabs and ensuring only one serial connection was active, the sketch began to work as intended. As shown in the video above, turning the potentiometer now correctly affects the size of the circle in the p5.js canvas.
         </p>
       </div>
 
