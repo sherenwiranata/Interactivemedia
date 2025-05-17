@@ -11,20 +11,23 @@
   <section id="containerweek7">
     <!-- Left sidebar menu -->
     <div class="left-inner">
+      <div class="back-button-wrapper">
         <a href="../../landing/landing.html" class="back-button">BACK</a>
-        <br />
-        <p class="headingweek7 knockout-box">
-          <span class="knockout-text">WEEK SEVEN</span>
-        </p>
-        <div class="weeks7">
-          <br />
-          <a href="../week7.html" class="week-link">INSPIRATION</a>
-          <br />
-          <a class="week-link-I">ACTIVITY</a>
-          <br />
-          <a href="../Experimentation/Experimentation.html" class="week-link">EXPERIMENTATION</a>
-        </div>
       </div>
+      <br />
+      <p class="headingweek7 knockout-box">
+        <span class="knockout-text1">WEEK</span>
+        <span class="knockout-text2">SEVEN</span>
+      </p>
+      <div class="weeks7">
+        <br />
+        <a href="../week7.html" class="week-link">INSPIRATION</a>
+        <br />
+        <a class="week-link-I">ACTIVITY</a>
+        <br />
+        <a href="../Experimentation/Experimentation.html" class="week-link">EXPERIMENTATION</a>
+      </div>
+    </div>
 
     <!-- Right content area -->
     <div class="right-inner">
@@ -39,7 +42,7 @@
       <div class="activity-block">
         <h2 class="activity-title">LED BUTTON</h2>
         <img src="./img/LEDBUTTON.jpg" alt="Another Activity" class="activity-image" />
-        <p><strong>Parts used:</strong> Power Bridge, Battery, Breadboard, LED, Wire, Resistor and Button</p>
+        <div class="parts-used"><strong>Parts used:</strong>Power Bridge, Battery, Breadboard, LED, Wire, Resistor and Button</div>
         <p class="activity-description">
           After getting to know the components that will be used to create a circuit. We create a simple LED with a button that switches it on when pressed. 
         </p>
@@ -56,7 +59,7 @@
             <source src="./video/2LED.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        <p><strong>Parts used:</strong>Power Bridge, Battery, Breadboard, LED, Wire, Resistor and Button</p>
+        <div class="parts-used"><strong>Parts used:</strong>Power Bridge, Battery, Breadboard, LED, Wire, Resistor and Button</div>
         <p class="activity-description">
           Similar to the previous circuit, the challenge here was figuring out how to connect an additional LED. I eventually solved the problem by creating a parallel connection, allowing both LEDs to form part of a closed circuit. At first, I failed a few times while getting used to the breadboard layout and where to place the components, especially the LEDs. But through trial and error, I began to understand how the connections work and how current flows through a parallel setup.
         </p>
@@ -73,9 +76,9 @@
             <source src="./video/dial.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        <p><strong>Parts used:</strong>
+          <div class="parts-used"><strong>Parts used:</strong>
           Power Bridge, Battery, Breadboard, LED, Wire, Resistor and Potentiometer
-        </p>
+        </div>
         <p class="activity-description">
           In this circuit, we replaced the button with a potentiometer—a dial that lets us control the amount of electrical resistance. Unlike a button, which simply opens or closes the circuit (turning the LED fully on or off), the potentiometer allows us to gradually adjust the voltage reaching the LED. This change in voltage controls how bright the LED appears, creating a dimming effect.
           By turning the dial, we control how much current flows through the circuit. Lower resistance allows more current to pass through, making the LED brighter. Higher resistance restricts the flow, causing the LED to dim or even turn off completely. This introduced us to a more nuanced form of interaction with electricity, where we’re not just flipping a switch, but shaping how power moves through the circuit.
@@ -94,9 +97,9 @@
             <source src="./video/distancesensor.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        <p><strong>Parts used:</strong>
+          <div class="parts-used"><strong>Parts used:</strong>
           Arduino, Breadboard, Distan Sensor, Wire, and Speaker
-        </p>
+        </div>
         <p class="activity-description">
           The final activity I did in class involved using a distance sensor to detect nearby objects and convey that information through sound using a speaker. I used the Ultrasonic Distance Sensor (HC-SR04) and a buzzer, and programmed the circuit with the Arduino IDE, using the basic “Ping” example code as a starting point.
           As an object gets detected by the sensor, the speaker emits sound. This activity helped me understand how sensors can turn physical input (like distance) into real-time feedback. It was also a fun introduction to combining hardware and code to create interactive responses.

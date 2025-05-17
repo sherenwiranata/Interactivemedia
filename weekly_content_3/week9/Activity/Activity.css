@@ -1,118 +1,122 @@
 /* Regular weight */
+/* Regular weight */
 @font-face {
   font-family: 'libBas';
-  src: url('../../LibreBaskerville-Regular.ttf') format('truetype');
-  font-weight: normal;
+  src: url('../../Imbue-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 200;
   font-style: normal;
 }
 
 /* Bold weight */
 @font-face {
   font-family: 'libBas';
-  src: url('../../LibreBaskerville-Bold.ttf') format('truetype');
-  font-weight: bold;
+  src: url('../../Imbue-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 800;
   font-style: normal;
 }
 
-body {
-  font-family: libBas, serif;
-  font-size: 0.9rem; /* 18px for comfortable reading */
-  line-height: 1.5; /* good for readability */
-  max-width: 90vw; /* optional: keeps line length optimal */
-  margin: 0 auto; /* centers the content */
-  padding: 2rem;
-  background-color: #c5bcb3;
-  background-image: url('../img/natural-paper.png');
-  background-repeat: repeat;
-  background-size: auto;
-  color: #000;
-}
-
-/* Updated container ID */
-#containerweek7 {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
-
-/* Sidebar */
-.left-inner {
-  width: 300px;
-  background-color: #c5bcb3;
-  background-image: url('../img/natural-paper.png');
-  background-repeat: repeat;
-  background-size: auto;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  overflow-y: auto;
-  border-right: 1px solid black; /* <-- Add this */
-}
-
-.back-button{
-  left: 0;
-  font-size: 0.9rem;
-  color: black;
-  text-decoration: none;
+  body {
+    font-family: libBas, serif;
+    font-size: 0.9rem; /* 18px for comfortable reading */
+    line-height: 1.5; /* good for readability */
+    max-width: 90vw; /* optional: keeps line length optimal */
+    margin: 0 auto; /* centers the content */
+    padding: 2rem;
+    background-color: #c5bcb3;
+    background-image: url('../img/natural-paper.png');
+    background-repeat: repeat;
+    background-size: auto;
+    color: rgb(36, 33, 33);
+  }
+  
+  /* Updated container ID */
+  #containerweek7 {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .left-inner {
+    width: 300px;
+    background-color: #c5bcb3;
+    background-image: url('../../img/natural-paper.png');
+    background-repeat: repeat;
+    background-size: auto;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-right: 1px solid rgb(36, 33, 33); /* <-- Add this */
   }
 
+  .back-button-wrapper {
+    border-bottom: 1px solid rgb(36, 33, 33);
+    width: 100%;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; /* optional spacing below the line */
+  }
+  
+  .back-button {
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+  }
+  
   .back-button:hover {
-      background-color: white;
+    background-color: white;
+    color: black;
   }
-
-/* Sidebar heading */
-/* Black background box for heading */
+  
+  
+  /* Sidebar heading */
+  /********************* left bar week title *******************/
 .knockout-box {
-background-color: black;
-padding: 0.3rem 15px;
-max-width: 300px; /* match container width */
-margin: clamp(16px, 10%, 50px) 0 clamp(16px, 5%, 30px) 0;
-box-sizing: border-box;
-border-radius: 0; /* optional */
+  background-color: rgb(36, 33, 33);
+  padding: 0.3rem 15px;
+  max-width: 300px; /* match container width */
+  margin: clamp(16px, 10%, 50px) 0 clamp(16px, 5%, 30px) 0;
+  box-sizing: border-box;
+  border-radius: 0; /* optional */
+  margin-top: 1rem;
 }
 
 /* Image-filled knockout text */
-.knockout-text {
-font-family: 'libBas', serif;
-font-weight: bold;
-font-size: calc(300px * 0.11); /* responsive approx 11% of container */
+.knockout-text1, .knockout-text2{
+  font-family: 'libBas', serif;
+  font-weight: bold;
+  font-size: clamp(1.8rem, 12vw, 10.5vw); /* responsive approx 11% of container */
+  
+  background: url('../img/textbackground2.jpg') center center;
+  background-size: cover;
 
-background: url('../img/textbackground2.jpg') center center;
-background-size: cover;
-
-color: transparent;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
-display: inline-block;
-white-space: nowrap;
-user-select: none;
-text-transform: uppercase;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  text-transform: uppercase;
+  margin-top: 0;
+  line-height: 0.8;
 }
+
+.knockout-text2{
+  font-size: clamp(1.8rem, 20vw, 13vw);
+}
+
 
 /* Plain text links styled like back-button but with hover effect */
 .week-link {
-font-family: 'libBas', serif;
-font-weight: bold;
-font-size: 1.2rem;
-color: black;
-text-decoration: none;
-cursor: pointer;
-padding: 15px 0;
-display: inline-block;
-max-width: 270px;
-box-sizing: border-box;
-}
-
-.week-link-I {
   font-family: 'libBas', serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: black;
-  text-decoration: underline;
+  font-size: clamp(1.2rem, 10vw, 4.2vw);
+  color: rgb(36, 33, 33);
+  text-decoration: none;
   cursor: pointer;
   padding: 15px 0;
   display: inline-block;
@@ -120,16 +124,27 @@ box-sizing: border-box;
   box-sizing: border-box;
 }
 
+.week-link-I {
+    font-family: 'libBas', serif;
+    font-size: clamp(1.2rem, 10vw, 4.2vw);
+    color: rgb(36, 33, 33);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 15px 0;
+    display: inline-block;
+    max-width: 270px;
+    box-sizing: border-box;
+  }
+
 /* Hover effect: underline and slight color brighten */
 .week-link:hover {
-text-decoration: underline;
-background-color: white;
+  text-decoration: underline;
+  background-color: white;
 }
 
-
-
-/***************** Right content area ****************/
-/* Activity block container */
+/************************************************* RIGHT *************************************/
+  
+ /* Activity block container */
 .activity-block {
   max-width: 720px; /* Wider width */
   width: 100%;
@@ -139,15 +154,18 @@ background-color: white;
 }
 
 .activity-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 10vw, 10vw);
   font-weight: bold;
   text-transform: uppercase;
   text-align: left;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-  margin-top: 0px;
-  border-bottom: 2px solid black; 
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+  line-height: 0.8;
   padding-bottom: 6px; 
+}
+
+.activity-block:first-of-type .activity-title {
+  margin-top: 0;
 }
 
 /* Activity image */
@@ -161,29 +179,48 @@ background-color: white;
 /* Parts used and description */
 .activity-block p {
   text-align: justify;
-  margin-bottom: 12px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #111;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: rgb(36, 33, 33);
+  border-bottom: 1px solid rgb(36, 33, 33); 
 }
 
 /* Parts used label styling */
-.activity-block p strong {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 4px;
+
+.activity-block p {
+  padding-bottom: 2rem;
+}
+
+.activity-block .parts-used {
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: rgb(36, 33, 33);
+}
+
+div > p:first-child {
+  border-bottom: none;
+}
+
+.activity-block a{
+  color: rgb(36, 33, 33);
+}
+
+.activity-block a:hover{
+  background-color: white;
 }
 
 .right-inner {
   margin-left: 320px; 
-  padding: 40px;
+  padding: 0.5rem;
   overflow-y: auto;
   width: calc(100% - 320px);
 }
 
-/* Responsive */
-/* Responsive */
+/****************************************** Responsive *****************************/
 @media screen and (max-width: 768px) {
   #containerweek7 {
     flex-direction: column;
@@ -197,7 +234,7 @@ background-color: white;
     position: relative;
     padding: 20px;
     border-right: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(36, 33, 33);
     box-sizing: border-box;
   }
 
@@ -235,4 +272,3 @@ background-color: white;
     height: auto;
   }
 }
-
